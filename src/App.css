@@ -1,20 +1,55 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
 
-/* html,
+html,
 body{
   height: 100%;
-} */
-
-body{
   background:rgb(255,255,244);
 }
 
+body{
+}
+
+.navbar {
+
+  background-color: transparent;
+}
+
+.top-nav-collapse {
+  background-color: #4285F4;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+      background-color: #4285F4;
+  }
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+.dark-blue-text {
+    color: #0A38F5;
+}
+.dark-pink-text {
+    color: #AC003A;
+}
+.dark-amber-text {
+    color: #ff6f00;
+}
+.dark-teal-text {
+    color: #004d40;
+}
+
+
 .hoja{
   color: rgb(220,220,226);
-  position:absolute;
+  position:relative;
   top:50%; left:50%;
   margin-left:-140px;
-  margin-top:-140px;
+  margin-top:100px;
   width:280px;
   height:280px;
   text-align:center;
@@ -73,4 +108,18 @@ body{
   100%{
     transform:rotateZ(-360deg) scaleX(1) scaleY(1);
   }
+}
+
+
+.course-card {
+  border: 1px black solid;
+  width: 20%;
+  margin: 10px;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center
 }

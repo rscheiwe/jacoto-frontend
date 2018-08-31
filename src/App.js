@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 
 
-
+import CourseList from './components/CourseList.js'
+import Header from './components/Header.js'
+import NavBar from './components/NavbarJacoto.js'
 import DownloadCSV from './DownloadCSV.js'
+
 import './App.css';
 
 class App extends Component {
 
   state = {
-    users: []
+    courses: []
   }
 
   componentDidMount() {
@@ -23,22 +26,25 @@ class App extends Component {
 
   passUsers = (json) => {
     this.setState({
-      users: json
+      courses: json
     })
   }
 
   render() {
-    console.log(this.state.users)
+    // console.log(this.state.courses)
     return (
-      <div className="hoja">JACOTO
+      <div style={{backgroundColor:'rgb(255,255,244)'}}>
+        <header>
+        <NavBar />
+        </header>
+          <Header />
 
+          <CourseList courses={this.state.courses} />
 
-
-          {/*<DownloadCSV data={this.state.users} />*/}
-
-
+          <DownloadCSV data={this.state.courses} />
 
       </div>
+
     );
   }
 }
