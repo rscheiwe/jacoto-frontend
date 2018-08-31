@@ -86,7 +86,12 @@ render() {
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
               <span className="d-none d-lg-inline-block mr-1"></span>
               <ModalPage />
-          </a>
+            </a>
+
+            <a id="navbar-category-pro-react" className="login-modal-form" role="button">
+              <span className="d-none d-lg-inline-block mr-1"></span>
+              <ModalPage />
+            </a>
           </Navbar>
         </Router>
 
