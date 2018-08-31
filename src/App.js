@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 
 import DownloadCSV from './DownloadCSV.js'
-import './App.css';
+import './App.scss';
 
 class App extends Component {
 
