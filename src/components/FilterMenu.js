@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Container } from 'semantic-ui-react'
+import { Menu, Container, Divider } from 'semantic-ui-react'
 
 class FilterMenu extends Component {
   state = {
@@ -16,7 +16,11 @@ class FilterMenu extends Component {
     const { activeItem } = this.state
 
     return (
-      <Container>
+
+      <div>
+      <Divider horizontal style={{position:'relative'}}>
+      <Container >
+      
       <Menu stackable style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
 
         <center><Menu.Item><b>Sort</b></Menu.Item>
@@ -43,6 +47,10 @@ class FilterMenu extends Component {
         </Menu.Item></center>
       </Menu>
       </Container>
+      </Divider>
+      </div>
+
+
     )
   }
 }
