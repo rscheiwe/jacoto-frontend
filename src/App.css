@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+/* @import "compass/css3"; */
 
 html,
 body{
@@ -7,6 +8,8 @@ body{
 }
 
 body{
+  /* background:rgb(255,255,244); */
+
 }
 
 .navbar {
@@ -111,15 +114,73 @@ body{
 }
 
 
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  /* display: flex; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+
+  /* line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center; */
+}
+
+
 .course-card {
-  border: 1px black solid;
-  width: 20%;
+  /* border: 1px black solid; */
+  /* width: 20%; */
+  height:100%;
+  border-radius: 25px;
   margin: 10px;
+  background-color:white;
+  /* margin: 0 auto; */
+  transition: transform .5s;
+  /* display: flex; */
+
+}
+
+.course-card:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .container-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center
+  justify-content: center;
+}
+
+
+.icon {
+  padding:10px;
+  padding-bottom:10px;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.heart-colored {
+  color:red;
+
 }

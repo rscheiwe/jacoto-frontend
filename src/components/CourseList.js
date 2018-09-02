@@ -1,5 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { Container, Row, Col } from 'mdbreact';
+import { Grid } from 'semantic-ui-react'
+// import Lightbox from 'react-image-lightbox';
 import CourseCard from './CourseCard.js'
+// require ('mdbreact/docs/pages/pro/Lightbox.css');
 
 const CourseList = (props) => {
   console.log(props.courses)
@@ -8,9 +12,25 @@ const CourseList = (props) => {
   })
 
   return (
-    <div className="container-row" key="course-row">
+    // <div className="container-row" key="course-row">
+    // <Container className="mt-5">
+    //   <div>
+    //
+    //
+    //     <ul className="flex-container">
+    //       {courseList}
+    //     </ul>
+    //   </div>
+    // </Container>
+<div className="container-row" key="course-row">
+    <Container className="mt-5">
+    <ul className="flex-container">
       {courseList}
+</ul>
+    </Container>
     </div>
+
+
   )
 
 }

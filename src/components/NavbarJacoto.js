@@ -32,7 +32,7 @@ render() {
                 <Collapse isOpen = { this.state.collapse } >
                   <NavbarNav left>
                     <NavItem active>
-                        <NavLink className="nav-link" to="#">Home</NavLink>
+                        <NavLink className="nav-link" to="/">Home</NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink className="nav-link" to="#">Link</NavLink>
@@ -84,13 +84,13 @@ render() {
             </ul>
 
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
-              <span className="d-none d-lg-inline-block mr-1"></span>
-              <ModalPage />
+              <span className="d-none d-lg-inline-block mr-1"><ModalPage /></span>
+
             </a>
 
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
-              <span className="d-none d-lg-inline-block mr-1"></span>
-              <ModalPage />
+
+              <span className="d-none d-lg-inline-block mr-1"><ModalPage /></span>
             </a>
           </Navbar>
         </Router>

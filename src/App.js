@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-
 import CourseList from './components/CourseList.js'
 import Header from './components/Header.js'
+import FooterPage from './components/Footer.js'
 import NavBar from './components/NavbarJacoto.js'
 import DownloadCSV from './DownloadCSV.js'
 
@@ -37,11 +37,16 @@ class App extends Component {
         <header>
         <NavBar />
         </header>
+
           <Header />
 
           <CourseList courses={this.state.courses} />
 
           <DownloadCSV data={this.state.courses} />
+
+
+
+          <FooterPage />
 
       </div>
 
