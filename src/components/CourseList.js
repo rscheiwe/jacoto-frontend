@@ -24,14 +24,14 @@ const CourseList = (props) => {
     //   </div>
     // </Container>
     <div>
-    <FilterMenu />
-<div className="container-row" key="course-row">
-    <Container className="mt-5">
-    <ul className="flex-container">
-      {courseList}
-</ul>
-    </Container>
-    </div>
+      <FilterMenu />
+      <div className="container-row" key="course-row">
+        <Container className="mt-5">
+          <ul className="flex-container">
+            {courseList}
+          </ul>
+        </Container>
+      </div>
     </div>
 
 
