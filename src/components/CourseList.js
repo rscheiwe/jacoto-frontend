@@ -20,7 +20,8 @@ const CourseList = (props) => {
           </ul>
         </Container>
       </div>
-    </div>
+      </div>
+    
 
 
   )

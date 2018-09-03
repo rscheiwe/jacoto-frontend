@@ -7,6 +7,7 @@ import Header from './components/Header.js'
 import Gallery from './components/Gallery.js'
 import Gallery2 from './components/Gallery2.js'
 import MidRow from './components/MidRow.js'
+import Midrow2 from './components/Midrow2.js'
 import FooterPage from './components/Footer.js'
 import DownloadCSV from './DownloadCSV.js'
 
@@ -23,9 +24,10 @@ class Home extends Component {
   }
 
   handleFetch = () => {
-    fetch("https://www.udacity.com/public-api/v1/courses")
+    fetch("http://localhost:3000/api/v1/courses")
       .then(res => res.json())
-      .then(json => this.passUsers(json.courses.slice(0, 10)))
+      .then(json => this.passUsers(json.data))
+      // .then(json => this.passUsers(json.courses.slice(0, 10)))
   }
 
   passUsers = (json) => {
@@ -44,20 +46,15 @@ class Home extends Component {
         <header>
         </header>
           <Header />
-          <Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
 
           <Gallery2 courses={this.state.courses}/>
-          {/*<Gallery courses={this.state.courses} />*/}
 
-        <MidRow />
+        {/*  <MidRow /> */}
+          <Midrow2 />
 
           <CourseList courses={this.state.courses} />
 
-
           <DownloadCSV data={this.state.courses} />
-
-
 
           <FooterPage />
 

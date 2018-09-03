@@ -15,6 +15,7 @@ class GalleryCard extends React.Component {
   }
 
   render() {
+    console.log(this.props.course.attributes)
     return (
         <Card className="gallery-card"
           style={{
@@ -22,10 +23,10 @@ class GalleryCard extends React.Component {
             borderBottomRightRadius:'25px',
           }}>
 
-          {!this.props.course.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/> : <img src={this.props.course.image} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
+          {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/> : <img src={this.props.course.attributes.image} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
           <Card.Content>
 
-            <center><h5 style={{textAlign:'center', padding:'3px', fontSize:'1.5vw'}}>{this.props.course.title}</h5></center>
+            <center><h5 style={{textAlign:'center', padding:'3px', fontSize:'1.5vw'}}>{this.props.course.attributes.title}</h5></center>
             <Card.Meta style={{paddingBottom:"20px"}}>
               <span className='provider' style={{padding:'10px', color:'gray', fontSize:'1.25vw'}}><small>Via <i>Udactiy</i></small></span>
             </Card.Meta>

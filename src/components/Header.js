@@ -5,9 +5,14 @@ import { Card } from 'mdbreact';
 const Header = () => {
   return (
 
-      <div className="hoja">JACOTO
+      <div className="hoja">
+
+        <img src={require('./jacoto_logo.png')} width="200px"/>
 
       </div>
+
+
+
 
 
   )
