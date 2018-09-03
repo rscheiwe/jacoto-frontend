@@ -2,7 +2,7 @@ import React from 'react';
 import { Input, Container, Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
 import { Form } from 'semantic-ui-react'
 
-class LoginForm extends React.Component {
+class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,8 +21,8 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
-        <a id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
-          LOGIN<i className="fa fa-sign-in ml-2"></i>
+        <a id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-unique btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+          Sign Up<i className="fa fa-user-plus ml-2"></i>
         </a>
           {/*<Button className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" onClick={this.toggle}>Login<i className="fa fa-sign-in ml-2"></i></Button>*/}
           <Form>
@@ -35,7 +35,7 @@ class LoginForm extends React.Component {
               <ModalFooter>
               <Form.Checkbox inline label='I agree to the terms and conditions' required />
               <a id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
-                LOGIN<i className="fa fa-sign-in ml-2"></i>
+                Sign Up<i className="fa fa-user-plus ml-2"></i>
               </a>
               </ModalFooter>
             </Modal>
@@ -45,4 +45,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+export default SignUpForm;

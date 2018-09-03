@@ -17,6 +17,8 @@ class CourseCard extends React.Component {
   render() {
     return (
       // <div className="d-flex flex-wrap">
+
+      //UNCOMMENT LINE BELOW TO RE-RENDER GRID LAYOUT CORRECTLY
       <Col md="4" style={{padding:'15px'}}>
 
 
@@ -31,7 +33,7 @@ class CourseCard extends React.Component {
         </Card.Content>
 
         <Card.Content extra  style={{position:"absolute", bottom:'10px', paddingTop:'15px'}} >
-      
+
            <a onClick={this.handleClick}>
              {this.state.clicked === true ? <Icon name="heart" className="heart-colored" /> : <Icon name='heart outline' />}
           </a>
@@ -42,7 +44,7 @@ class CourseCard extends React.Component {
 
       </Card>
 
-       </Col>
+      </Col>
     )
   }
 }

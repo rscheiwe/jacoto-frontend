@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import CourseList from './components/CourseList.js'
 import Header from './components/Header.js'
+import Gallery from './components/Gallery.js'
+import Gallery2 from './components/Gallery2.js'
+
 import FooterPage from './components/Footer.js'
 import NavBar from './components/NavbarJacoto.js'
 import DownloadCSV from './DownloadCSV.js'
@@ -39,6 +42,10 @@ class App extends Component {
         </header>
 
           <Header />
+
+
+          <Gallery2 courses={this.state.courses}/>
+          {/*<Gallery courses={this.state.courses} />*/}
 
           <CourseList courses={this.state.courses} />
 

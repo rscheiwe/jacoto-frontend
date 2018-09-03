@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Fa, Container } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
-import ModalPage from './LoginForm.js'
+import LoginForm from './LoginForm.js'
+import SignUpForm from './SignUpForm.js'
+
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -84,13 +86,13 @@ render() {
             </ul>
 
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
-              <span className="d-none d-lg-inline-block mr-1"><ModalPage /></span>
+              <span className="d-none d-lg-inline-block mr-1"><LoginForm /></span>
 
             </a>
 
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
 
-              <span className="d-none d-lg-inline-block mr-1"><ModalPage /></span>
+              <span className="d-none d-lg-inline-block mr-1"><SignUpForm /></span>
             </a>
           </Navbar>
         </Router>
