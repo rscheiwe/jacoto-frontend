@@ -4,12 +4,7 @@ import GalleryCard from './GalleryCard.js'
 
 import { Container, Row, Col } from 'mdbreact';
 
-export default class Test extends React.Component {
-
-  // state = {
-  //   courses: [],
-  //   activeItemIndex: 0
-  // }
+export default class Gallery2 extends React.Component {
 
   galleryItems = (courses) => {
 
@@ -22,17 +17,14 @@ export default class Test extends React.Component {
         <div key={`key-${i}`}
             className="gallery-card"
             style={{
-              paddingTop:'20px',
-              paddingBottom:'20px',
-              background:'rgb(255,255,244)',
-              display:'flex',
-              flexDirection:'row',
-              flexWrap:'wrap'
+              paddingTop:'25px',
+              paddingBottom:'10px',
+              background:'rgb(255,255,244)'
             }}
               >
-              <span>
-                {item}
-              </span>
+          <span>
+            {item}
+          </span>
         </div>
       ))
     )
@@ -52,7 +44,7 @@ export default class Test extends React.Component {
         <hr />
         <ItemsCarousel
 
-          numberOfCards={3}
+          numberOfCards={3.5}
           gutter={2}
           showSlither={true}
           firstAndLastGutter={true}
@@ -62,7 +54,14 @@ export default class Test extends React.Component {
           rightChevron={'>'}
           leftChevron={'<'}
           outsideChevron={false}
-          style={{height:'450px', display:'flex'}}
+          style={{
+            minHeight:'375px',
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+          }}
+          className="flex-container"
         >
           {courses}
         </ItemsCarousel>

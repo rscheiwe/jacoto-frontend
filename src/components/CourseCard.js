@@ -13,27 +13,20 @@ class CourseCard extends React.Component {
       return { clicked: !prevState.clicked }
     })
   }
-  // console.log(props.course.title)
+
   render() {
     return (
       // <div className="d-flex flex-wrap">
-
-      //UNCOMMENT LINE BELOW TO RE-RENDER GRID LAYOUT CORRECTLY
       <Col md="4" style={{padding:'15px'}}>
-
-
         <Card className="course-card" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
         {!this.props.course.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/> : <img src={this.props.course.image} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
         <Card.Content>
-
           <h5 style={{textAlign:'center'}}>{this.props.course.title}</h5>
         <Card.Meta style={{paddingBottom:"20px"}}>
           <span className='provider' style={{padding:'10px', color:'gray'}}><small>Via <i>Udactiy</i></small></span>
         </Card.Meta>
         </Card.Content>
-
         <Card.Content extra  style={{position:"absolute", bottom:'10px', paddingTop:'15px'}} >
-
            <a onClick={this.handleClick}>
              {this.state.clicked === true ? <Icon name="heart" className="heart-colored" /> : <Icon name='heart outline' />}
           </a>
@@ -41,9 +34,7 @@ class CourseCard extends React.Component {
             <Icon name='fork'/>
           </a>
         </Card.Content>
-
       </Card>
-
       </Col>
     )
   }

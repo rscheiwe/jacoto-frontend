@@ -18,9 +18,9 @@ class FilterMenu extends Component {
     return (
 
       <div>
-      <Divider horizontal style={{position:'relative'}}>
-      <Container >
-      
+
+      <Container style={{paddingTop:'10px'}}>
+
       <Menu stackable style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
 
         <center><Menu.Item><b>Sort</b></Menu.Item>
@@ -47,7 +47,7 @@ class FilterMenu extends Component {
         </Menu.Item></center>
       </Menu>
       </Container>
-      </Divider>
+
       </div>
 
 

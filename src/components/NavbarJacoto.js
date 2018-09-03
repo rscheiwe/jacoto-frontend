@@ -75,19 +75,10 @@ render() {
                 </a>
               </li>
 
-              <li id="navbar-static-support" className="nav-item ">
-                <a href="/support/" className="nav-link waves-effect"><span className="clearfix d-none d-sm-inline-block">Support</span></a>
-              </li>
-
-              {/*<li className="nav-item">
-                <span className="clearfix d-none d-sm-inline-block"><ModalPage /></span>
-              </li>*/}
-
             </ul>
 
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
               <span className="d-none d-lg-inline-block mr-1"><LoginForm /></span>
-
             </a>
 
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
