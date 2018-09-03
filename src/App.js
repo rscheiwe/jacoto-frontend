@@ -1,72 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react'
+import NavbarJacoto from './components/NavbarJacoto.js'
+import Main from './Main.js'
 
-import { Responsive, Visibility } from 'semantic-ui-react'
-import NavBar from './components/NavbarJacoto.js'
-import CourseList from './components/CourseList.js'
-import Header from './components/Header.js'
-import Gallery from './components/Gallery.js'
-import Gallery2 from './components/Gallery2.js'
-import MidRow from './components/MidRow.js'
-import FooterPage from './components/Footer.js'
-import DownloadCSV from './DownloadCSV.js'
+const App = () => (
 
-import './App.css';
+  <div>
+    <NavbarJacoto />
+    <Main />
+  </div>
+)
 
-class App extends Component {
-
-  state = {
-    courses: []
-  }
-
-  componentDidMount() {
-    this.handleFetch()
-  }
-
-  handleFetch = () => {
-    fetch("https://www.udacity.com/public-api/v1/courses")
-      .then(res => res.json())
-      .then(json => this.passUsers(json.courses.slice(0, 10)))
-  }
-
-  passUsers = (json) => {
-    this.setState({
-      courses: json
-    })
-  }
-
-  render() {
-    return (
-      // <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-      // <Visibility
-      //     once={false}
-      //   >
-      <div style={{backgroundColor:'rgb(255,255,244)'}}>
-        <header>
-        <NavBar />
-        </header>
-
-          <Header />
-
-
-          <Gallery2 courses={this.state.courses}/>
-          {/*<Gallery courses={this.state.courses} />*/}
-
-        <MidRow />
-
-          <CourseList courses={this.state.courses} />
-
-
-          <DownloadCSV data={this.state.courses} />
-
-
-
-          <FooterPage />
-
-      </div>
-      // </Visibility>
-      // </Responsive>
-    );
-  }
-}
-
-export default App;
+export default App

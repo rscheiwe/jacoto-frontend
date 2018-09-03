@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Fa, Container } from 'mdbreact';
+import { Link } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom';
 import LoginForm from './LoginForm.js'
 import SignUpForm from './SignUpForm.js'
@@ -34,10 +35,10 @@ render() {
                 <Collapse isOpen = { this.state.collapse } >
                   <NavbarNav left>
                     <NavItem active>
-                        <NavLink className="nav-link" to="/">Home</NavLink>
+                        <Link to='/'>Home</Link>
                     </NavItem>
                     <NavItem>
-                        <NavLink className="nav-link" to="#">Link</NavLink>
+                        <Link to='/about'>About</Link>
                     </NavItem>
                     <NavItem>
                         <NavLink className="nav-link" to="#" disabled>Disabled</NavLink>
