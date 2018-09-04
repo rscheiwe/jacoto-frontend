@@ -15,9 +15,8 @@ class GalleryCard extends React.Component {
   }
 
   render() {
-    console.log(this.props.course.attributes)
     return (
-        <Card className="gallery-card"
+        <Card id={this.props.course.id} className="gallery-card"
           style={{
             borderTopLeftRadius:'25px',
             borderBottomRightRadius:'25px',

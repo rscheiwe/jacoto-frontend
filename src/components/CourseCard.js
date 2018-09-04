@@ -18,7 +18,7 @@ class CourseCard extends React.Component {
     return (
       // <div className="d-flex flex-wrap">
       <Col md="4" style={{padding:'15px'}}>
-        <Card className="course-card" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
+        <Card id={this.props.course.id} href={`/courses/${this.props.course.id}`} className="course-card" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
         {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy-image"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
         <Card.Content>
           <h5 style={{textAlign:'center'}}>{this.props.course.attributes.title}</h5>

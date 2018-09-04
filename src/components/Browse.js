@@ -48,9 +48,10 @@ class Browse extends Component {
   }
 
   setSearchedCourses = (data) => {
+    let element = document.getElementById('course-row')
     this.setState({
       courses: data
-    })
+    }, () => element.scrollIntoView({behavior: "smooth"}))
   }
 
   render() {
@@ -106,6 +107,8 @@ class Browse extends Component {
               <h1 style={{
                 marginLeft:'0px'
               }}>
+              <span className="searchElement">
+              </span>
                 <span style={{
                   fontSize:'130px',
                   letterSpacing:'.055em',

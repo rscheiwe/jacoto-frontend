@@ -32,6 +32,8 @@ const Midrow2 = () => {
             <h1 style={{
               marginLeft:'0px'
             }}>
+              <span className="lineElement">
+              </span>
               <span style={{
                 fontSize:'130px',
                 letterSpacing:'.055em',
