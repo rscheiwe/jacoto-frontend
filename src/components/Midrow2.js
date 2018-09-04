@@ -30,14 +30,20 @@ const Midrow2 = () => {
             zIndex:'1'
           }}>
             <h1 style={{
-              marginLeft:'173px'
+              marginLeft:'0px'
             }}>
               <span style={{
                 fontSize:'130px',
                 letterSpacing:'.055em',
-                fontFamily:'Franchise'
-              }}>HELLO</span>
+                fontFamily: 'Oswald'
+              }}><b>Learn Anywhere</b></span>
             </h1>
+            <p style={{
+              fontSize: '12px',
+              letterSpacing: '0.4em',
+              lineHeight: '2.4'
+            }}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>
+            </p>
           </div>
 
           <div style={{

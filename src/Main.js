@@ -4,8 +4,6 @@ import Home from './Home.js'
 import About from './components/About.js'
 import Browse from './components/Browse.js'
 import Contact from './components/Contact.js'
-// import About from './components/About.ks'
-// import Schedule from './Schedule'
 
 const Main = () => (
   <main>

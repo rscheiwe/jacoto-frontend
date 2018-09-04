@@ -45,17 +45,14 @@ class Home extends Component {
       <div style={{backgroundColor:'rgb(255,255,244)'}}>
         <header>
         </header>
-          <Header />
 
+          <Header />
           <Gallery2 courses={this.state.courses}/>
 
         {/*  <MidRow /> */}
           <Midrow2 />
-
           <CourseList courses={this.state.courses} />
-
           <DownloadCSV data={this.state.courses} />
-
           <FooterPage />
 
       </div>

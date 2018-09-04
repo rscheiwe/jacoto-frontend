@@ -40,7 +40,7 @@ export default class Gallery2 extends React.Component {
     return (
       <div className="container-row">
         <Container className="mt-5">
-        <h2>Feature Courses</h2>
+        <h2 style={{fontFamily:'Oswald', letterSpacing:'.5em', textAlign:'right'}}>Feature Courses</h2>
         <hr />
         <ItemsCarousel
 
