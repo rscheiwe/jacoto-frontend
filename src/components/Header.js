@@ -6,9 +6,7 @@ const Header = () => {
   return (
 
       <div className="hoja">
-
         <img src={require('./jacoto_logo.png')} alt="" width="200px"/>
-
       </div>
 
 

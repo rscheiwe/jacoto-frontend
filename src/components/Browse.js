@@ -10,16 +10,6 @@ class Browse extends Component {
     courses: []
   }
 
-  // componentDidMount() {
-  //   this.handleFetch()
-  // }
-  //
-  // handleFetch = () => {
-  //   Adapter.getCourses()
-  //     .then(json => this.passCourses(json.data))
-  //
-  // }
-
   passCourses = (json) => {
     this.setState({
       courses: json
@@ -38,7 +28,6 @@ class Browse extends Component {
     e.preventDefault()
     Adapter.searchCourses(this.state.searchTerm)
       .then(json => {
-        console.log(json)
         this.setSearchedCourses(json.data)
       })
     // if (this.state.searchTerm === null || this.state.searchTerm === "") return
@@ -129,8 +118,6 @@ class Browse extends Component {
               }}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>
               </p>
             </div>
-
-
           </div>
         </div>
       </div>

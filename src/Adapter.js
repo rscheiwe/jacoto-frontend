@@ -17,6 +17,12 @@ const Adapter =  {
         searchTerm: searchTerm
         })
       }).then(res => res.json())
+    },
+
+    readCourse: function(id) {
+      return fetch(`http://localhost:3000/api/v1/courses/${id}`, {
+        method: "GET"
+      }).then(res => res.json())
     }
 
 
