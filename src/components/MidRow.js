@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Header, Image } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 
 const MidRow = () => {
 
@@ -8,11 +8,11 @@ const MidRow = () => {
       <Grid columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column width={8} style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-              <img src={require('./placeholder.png')} width="500px" />
+              <img src={require('./placeholder.png')} width="500px" alt="" />
           </Grid.Column>
 
           <Grid.Column width={8} style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-              <img src={require('./jacoto_book.jpg')} width="500px" />
+              <img src={require('./jacoto_book.jpg')} width="500px" alt="" />
           </Grid.Column>
         </Grid.Row>
       </Grid>

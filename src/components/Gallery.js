@@ -1,6 +1,6 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
-import { Container, Row, Col } from 'mdbreact';
+import { Container, Row } from 'mdbreact';
 import GalleryCard from './GalleryCard.js'
 
 

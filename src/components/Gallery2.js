@@ -2,7 +2,7 @@ import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import GalleryCard from './GalleryCard.js'
 
-import { Container, Row, Col } from 'mdbreact';
+import { Container } from 'mdbreact';
 
 export default class Gallery2 extends React.Component {
 
@@ -35,7 +35,7 @@ export default class Gallery2 extends React.Component {
     console.log(this.props.courses)
 
     const courses = this.galleryItems(this.props.courses);
-    const activeItemIndex = 0
+    // const activeItemIndex = 0
 
     return (
       <div className="container-row">

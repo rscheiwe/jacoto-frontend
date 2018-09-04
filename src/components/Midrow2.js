@@ -1,6 +1,6 @@
 import React from 'react'
-import {Container} from 'mdbreact'
-import { Grid, Header, Image } from 'semantic-ui-react'
+// import {Container} from 'mdbreact'
+// import { Grid, Header, Image } from 'semantic-ui-react'
 
 const Midrow2 = () => {
 
@@ -60,7 +60,7 @@ const Midrow2 = () => {
                 style={{
                   width:"100%",
                   backgroundSize:'cover'
-                }}
+                }} alt=""
               />
           </div>
         </div>

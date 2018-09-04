@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'mdbreact';
+// import { Card } from 'mdbreact';
 
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
 
       <div className="hoja">
 
-        <img src={require('./jacoto_logo.png')} width="200px"/>
+        <img src={require('./jacoto_logo.png')} alt="" width="200px"/>
 
       </div>
 

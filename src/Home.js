@@ -8,7 +8,7 @@ import Gallery from './components/Gallery.js'
 import Gallery2 from './components/Gallery2.js'
 import MidRow from './components/MidRow.js'
 import Midrow2 from './components/Midrow2.js'
-import FooterPage from './components/Footer.js'
+import Adapter from './Adapter.js'
 import DownloadCSV from './DownloadCSV.js'
 
 import './App.css';
@@ -24,15 +24,14 @@ class Home extends Component {
   }
 
   handleFetch = () => {
-    fetch("http://localhost:3000/api/v1/courses")
-      .then(res => res.json())
-      .then(json => this.passUsers(json.data))
-      // .then(json => this.passUsers(json.courses.slice(0, 10)))
+    Adapter.getCourses()
+      .then(json => this.passCourses(json.data))
+      // .then(json => this.passCourses(json.courses.slice(0, 10)))
   }
 
-  passUsers = (json) => {
+  passCourses = (data) => {
     this.setState({
-      courses: json
+      courses: data
     })
   }
 
@@ -53,7 +52,7 @@ class Home extends Component {
           <Midrow2 />
           <CourseList courses={this.state.courses} />
           <DownloadCSV data={this.state.courses} />
-          <FooterPage />
+
 
       </div>
       // </Visibility>

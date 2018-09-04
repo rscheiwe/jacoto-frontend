@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Fa, Container } from 'mdbreact';
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem } from 'mdbreact';
 import { Link } from 'react-router-dom'
 import { Icon } from 'semantic-ui-react'
 // import { BrowserRouter as Router } from 'react-router-dom';
@@ -31,10 +31,10 @@ render() {
             <Navbar className="navbar fixed-top navbar-expand-md navbar-transparent double-nav scrolling-navbar transparent">
             { !this.state.isWideEnough && <NavbarToggler onClick={this.clicked } />}
               <NavbarBrand href="/">
-                <img src={require('./jacoto_logo.png')} width="100px" />
+                <img src={require('./jacoto_logo.png')} width="100px" alt="logo"/>
               </NavbarBrand>
               <div className="float-left">
-                <a href="#" onClick={this.clicked} ><i className="fa fa-bars"></i><span className="sr-only" aria-hidden="true">Toggle side navigation</span></a>
+                <a onClick={this.clicked} ><i className="fa fa-bars"></i><span className="sr-only" aria-hidden="true">Toggle side navigation</span></a>
               </div>
                 <Collapse isOpen = { this.state.collapse } >
 
@@ -69,7 +69,7 @@ render() {
                 <span id="dynamicContentWrapper-mainNavbar2"></span>
               </span>
             </div>
-            <img src={require('./jacoto_brand.png')} width="50px" />
+            <img src={require('./jacoto_brand.png')} width="50px" alt="brand"/>
 
             <ul className="nav navbar-nav nav-flex-icons ml-auto">
 

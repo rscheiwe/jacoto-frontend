@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'mdbreact';
+import { Container } from 'mdbreact';
 // import { Grid } from 'semantic-ui-react'
 import CourseCard from './CourseCard.js'
 import FilterMenu from './FilterMenu.js'
@@ -21,7 +21,7 @@ const CourseList = (props) => {
         </Container>
       </div>
       </div>
-    
+
 
 
   )

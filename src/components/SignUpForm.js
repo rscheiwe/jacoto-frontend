@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Container, Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
+import { Input, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
 import { Form } from 'semantic-ui-react'
 
 class SignUpForm extends React.Component {

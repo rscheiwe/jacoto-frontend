@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, Icon, Image, Grid } from 'semantic-ui-react'
-import { Button, CardBody, Col, CardImage, CardTitle, CardText } from 'mdbreact';
+import { Card, Icon } from 'semantic-ui-react'
+import { Col } from 'mdbreact';
 
 class CourseCard extends React.Component {
 
@@ -19,9 +19,9 @@ class CourseCard extends React.Component {
       // <div className="d-flex flex-wrap">
       <Col md="4" style={{padding:'15px'}}>
         <Card className="course-card" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
-        {!this.props.course.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/> : <img src={this.props.course.image} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
+        {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy-image"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
         <Card.Content>
-          <h5 style={{textAlign:'center'}}>{this.props.course.title}</h5>
+          <h5 style={{textAlign:'center'}}>{this.props.course.attributes.title}</h5>
         <Card.Meta style={{paddingBottom:"20px"}}>
           <span className='provider' style={{padding:'10px', color:'gray'}}><small>Via <i>Udactiy</i></small></span>
         </Card.Meta>

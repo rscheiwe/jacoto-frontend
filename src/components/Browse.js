@@ -1,26 +1,60 @@
 import React, {Component} from 'react'
 import { Input } from 'mdbreact'
+import Adapter from '../Adapter.js'
+import CourseList from './CourseList.js'
 
 class Browse extends Component {
 
   state = {
-    searchTerm: null
+    searchTerm: '',
+    courses: []
   }
 
+  // componentDidMount() {
+  //   this.handleFetch()
+  // }
+  //
+  // handleFetch = () => {
+  //   Adapter.getCourses()
+  //     .then(json => this.passCourses(json.data))
+  //
+  // }
+
+  passCourses = (json) => {
+    this.setState({
+      courses: json
+    })
+  }
 
   handleChange = (e) => {
     console.log(e.target.value)
+    this.setState({
+      searchTerm: e.target.value
+    })
 
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
+    Adapter.searchCourses(this.state.searchTerm)
+      .then(json => {
+        console.log(json)
+        this.setSearchedCourses(json.data)
+      })
     // if (this.state.searchTerm === null || this.state.searchTerm === "") return
-    console.log("done")
-    document.getElementById("search-form").value = ""
+    this.setState({
+      searchTerm: ""
+    })
+  }
+
+  setSearchedCourses = (data) => {
+    this.setState({
+      courses: data
+    })
   }
 
   render() {
+
     return (
       <div style={{backgroundColor:'rgb(255,255,244)'}}>
       <div style={{
@@ -59,7 +93,7 @@ class Browse extends Component {
                   backgroundSize:'cover',
                   backgroundPositionX: "50%",
                   backgroundPositionY: "50%"
-                }}
+                }} alt="background"
               />
           </div>
 
@@ -77,10 +111,10 @@ class Browse extends Component {
                   letterSpacing:'.055em',
                   fontFamily: 'Oswald'
                 }}>
-                <b>Seach courses</b>
-                <form onSubmit={this.handleSubmit}>
-                <Input label="(topic, pace, etc.)" id="search-form" icon="search" onChange={this.handleChange} value={this.state.searchTerm} />
-                </form>
+                  <b>Search courses</b>
+                  <form onSubmit={this.handleSubmit}>
+                    <Input label="(topic, pace, etc.)" id="search-form" icon="search" onChange={this.handleChange} value={this.state.searchTerm} />
+                  </form>
 
                 </span>
 
@@ -97,10 +131,9 @@ class Browse extends Component {
           </div>
         </div>
       </div>
-
-
-    )
-  }
+      <div>
+        <CourseList courses={this.state.courses} />
+      </div>
       </div>
     )
   }

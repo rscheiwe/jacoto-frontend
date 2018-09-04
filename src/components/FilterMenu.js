@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Container, Divider } from 'semantic-ui-react'
+import { Menu, Container } from 'semantic-ui-react'
 
 class FilterMenu extends Component {
   state = {
