@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'mdbreact';
 // import { Grid } from 'semantic-ui-react'
 import CourseCard from './CourseCard.js'
-import FilterMenu from './FilterMenu.js'
+// import FilterMenu from './FilterMenu.js'
 
 const CourseList = (props) => {
   const courseList = props.courses.map(course => {
@@ -12,7 +12,7 @@ const CourseList = (props) => {
   return (
 
     <div>
-      <FilterMenu />
+
       <div className="container-row" id="course-row" key="course-row">
         <Container className="mt-5">
           <ul className="flex-container">

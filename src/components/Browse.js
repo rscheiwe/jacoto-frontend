@@ -117,6 +117,9 @@ class Browse extends Component {
                 lineHeight: '2.4'
               }}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>
               </p>
+              <a href="/browse/advanced" id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-outline-unique btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+                Advanced Search<i className="fa fa-sign-in ml-2"></i>
+              </a>
             </div>
           </div>
         </div>

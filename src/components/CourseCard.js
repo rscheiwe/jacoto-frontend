@@ -21,7 +21,7 @@ class CourseCard extends React.Component {
         <Card id={this.props.course.id} href={`/courses/${this.props.course.id}`} className="course-card" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
         {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy-image"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
         <Card.Content>
-          <h5 style={{textAlign:'center'}}>{this.props.course.attributes.title}</h5>
+          <h5 style={{textAlign:'center', fontFamily:'Oswald'}}>{this.props.course.attributes.title}</h5>
         <Card.Meta style={{paddingBottom:"20px"}}>
           <span className='provider' style={{padding:'10px', color:'gray'}}><small>Via <i>Udactiy</i></small></span>
         </Card.Meta>

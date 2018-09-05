@@ -25,7 +25,7 @@ class GalleryCard extends React.Component {
           {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy-image"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
           <Card.Content>
 
-            <center><h5 style={{textAlign:'center', padding:'3px', fontSize:'1.5vw'}}>{this.props.course.attributes.title}</h5></center>
+            <center><h5 style={{textAlign:'center', padding:'3px', fontSize:'1.5vw', fontFamily:'Oswald'}}>{this.props.course.attributes.title}</h5></center>
             <Card.Meta style={{paddingBottom:"20px"}}>
               <span className='provider' style={{padding:'10px', color:'gray', fontSize:'1.25vw'}}><small>Via <i>Udactiy</i></small></span>
             </Card.Meta>

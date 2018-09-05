@@ -60,6 +60,7 @@ class Course extends Component {
                 alignItems:'center',
                 flexDirection:'row-reverse'
               }}>
+
                 <span style={{
                   fontSize:'105px',
                   letterSpacing:'0.2em',
@@ -73,10 +74,13 @@ class Course extends Component {
                 </span>
               </h1>
               <div>
+              <span className="descriptionElement">
+              </span>
                 <p style={{
                   fontSize:'12px',
                   letterSpacing:'0.4em',
                   lineHeight:'2.3'
+                  // marginLeft:'20%'
                 }}>{!this.state.course ?
                     null
                     :
@@ -102,10 +106,11 @@ class Course extends Component {
               height:'52%',
               backgroundSize:'cover',
               backgroundRepeat:'no repeat'
-            }}>{!this.state.course ?
+            }}>
+              {!this.state.course ?
                 null
                 :
-                <img src={this.state.course.attributes.image} style={{maxWidth:'700px', minWidth:'700px'}}/>
+                <img className="courseImageIndividual" src={this.state.course.attributes.image}/>
               }
 
             </div>
