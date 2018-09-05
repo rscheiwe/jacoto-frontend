@@ -23,6 +23,19 @@ const Adapter =  {
       return fetch(`http://localhost:3000/api/v1/courses/${id}`, {
         method: "GET"
       }).then(res => res.json())
+    },
+
+    topicCourses: function(topic) {
+      return fetch(`http://localhost:3000/api/vi/queries`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accepts': 'application/json'
+        },
+        body: JSON.stringify({
+          topic: topic
+        })
+      }).then(res => res.json())
     }
 
 

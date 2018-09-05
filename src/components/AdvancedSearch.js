@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
 import Adapter from '../Adapter.js'
 import CourseList from './CourseList.js'
-import { Container } from 'mdbreact'
+import { Container, Divider } from 'semantic-ui-react'
+
 
 class AdvancedSearch extends Component {
+
+  state = {
+    courses:[]
+  }
+
+  toggle = (e) => {
+    console.log(e)
+  }
+
+
 
   render() {
 
@@ -91,8 +102,18 @@ class AdvancedSearch extends Component {
 
         </div>
         <div>
-          <Container >
-          HI
+        <br />
+          <Container align='center' fluid>
+            <a id="topic-search" onClick={this.toggle} className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+              Topic<i className="fa fa-sign-in ml-2"></i>
+            </a>
+            <a id="price-search" onClick={this.toggle} className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+              Price<i className="fa fa-sign-in ml-2"></i>
+            </a>
+            <button id="length-search" onClick={this.toggle} className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+              Length<i className="fa fa-sign-in ml-2"></i>
+            </button>
+
           </Container>
         </div>
       </div>
