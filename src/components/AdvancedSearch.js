@@ -17,22 +17,22 @@ class AdvancedSearch extends Component {
 
   toggle = (e) => {
     console.log(e.target.id)
-    if (e.target.id === 'topic-search') {
+    if (e.target.id === 'topic-search' || e.target.id === 'topic-search-text' || e.target.id === 'topic-search-font') {
       this.setState({
         courses: [],
         clicked: "topics"
       })
-    } else if (e.target.id === 'price-search') {
+    } else if (e.target.id === 'price-search' || e.target.id === 'price-search-text' || e.target.id === 'price-search-font') {
       this.setState({
         courses: [],
         clicked: "price"
       })
-    } else if (e.target.id === 'length-search') {
+    } else if (e.target.id === 'length-search' || e.target.id === 'length-search-text' || e.target.id === 'length-search-font') {
       this.setState({
         courses: [],
         clicked: "length"
       })
-    } else if (e.target.id === 'provider-search') {
+    } else if (e.target.id === 'provider-search'|| e.target.id === 'provider-search-text' || e.target.id === 'provider-search-font') {
       this.setState({
         courses: [],
         clicked: "provider"
@@ -184,18 +184,18 @@ class AdvancedSearch extends Component {
               <h5>Topic</h5>
               <i className="fa fa-sign-in ml-2"></i>
               <div className="overlay" onClick={this.toggle} id="topic-search" >
-                <div className="text" onClick={this.toggle} id="topic-search">
-                  <h5 onClick={this.toggle} id="topic-search">Topic</h5>
+                <div className="text" onClick={this.toggle} id="topic-search-text">
+                  <h5 onClick={this.toggle} id="topic-search-font">Topic</h5>
                 </div>
               </div>
             </a>
             </span>
-            <span className="search-button">
+            <span className="search-button" id="price-search" >
             <a className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', minWidth:'200px'}}>
               <h5>Price</h5><i className="fa fa-sign-in ml-2"></i>
               <div className="overlay" id="price-search" onClick={this.toggle} >
-                <div className="text" id="price-search" onClick={this.toggle}>
-                  <h5 id="price-search" onClick={this.toggle}>Price</h5>
+                <div className="text" id="price-search-text" onClick={this.toggle}>
+                  <h5 id="price-search-font" onClick={this.toggle}>Price</h5>
                 </div>
               </div>
             </a>
@@ -204,8 +204,8 @@ class AdvancedSearch extends Component {
             <a className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', minWidth:'200px'}}>
               <h5>Length</h5><i className="fa fa-sign-in ml-2"></i>
               <div className="overlay" id="length-search" onClick={this.toggle} >
-                <div className="text" id="length-search" onClick={this.toggle}>
-                  <h5 id="length-search" onClick={this.toggle}>Length</h5>
+                <div className="text" id="length-search-text" onClick={this.toggle}>
+                  <h5 id="length-search-font" onClick={this.toggle}>Length</h5>
                 </div>
               </div>
             </a>
@@ -214,8 +214,8 @@ class AdvancedSearch extends Component {
             <a className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', minWidth:'200px'}}>
               <h5>Provider</h5><i className="fa fa-sign-in ml-2"></i>
               <div className="overlay" id="provider-search" onClick={this.toggle} >
-                <div className="text" id="provider-search" onClick={this.toggle}>
-                  <h5 id="provider-search" onClick={this.toggle}>Provider</h5>
+                <div className="text" id="provider-search-text" onClick={this.toggle}>
+                  <h5 id="provider-search-font" onClick={this.toggle}>Provider</h5>
                 </div>
               </div>
             </a>
