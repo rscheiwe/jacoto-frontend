@@ -26,7 +26,7 @@ const Adapter =  {
     },
 
     topicCourses: function(topic) {
-      return fetch(`http://localhost:3000/api/vi/queries`, {
+      return fetch("http://localhost:3000/api/v1/queries", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
