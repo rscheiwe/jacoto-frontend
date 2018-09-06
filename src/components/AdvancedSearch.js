@@ -61,24 +61,28 @@ class AdvancedSearch extends Component {
     let lengths;
     let providers;
     if (this.state.clicked === 'topics') {
+      const key = "topic"
       topics = ['Data Science', 'Humanities', 'Philosophy', 'Technologies', 'Science']
       return topicList = topics.map(topic => {
-        return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch }/>
+        return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
       })
     } else if (this.state.clicked === 'price') {
+      const key = "price"
       prices = ["free", "cost"]
       return topicList = prices.map(topic => {
-        return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch }/>
+        return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
       })
     } else if (this.state.clicked === 'length') {
+      const key = "length"
       lengths = ["self-paced", "<1 Month", "<6 Months"]
       return topicList = lengths.map(topic => {
-        return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch }/>
+        return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
       })
     } else if (this.state.clicked === 'provider') {
+      const key = "provider"
       providers = ["MIT", "Udacity", "edX", "Coursera"]
       return topicList = providers.map(topic => {
-        return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch }/>
+        return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
       })
     }
   }
