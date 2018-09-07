@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.main-div {
+  height: 100vh;
+  min-width: 1024px;
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+}
+
+div.blanket-div {
+  position: relative;
+  min-height: 520px;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.flex-div {
+  display: flex;
+  flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.img-div {
+  width: 100%;
+  height: calc(100% - 86px);
+  /* background-size: cover; */
+  top: 17px;
+  right: 18px;
+}
+
+.img-back-advanced {
+  width: 150%;
+  background-size: cover;
+  align: left;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.txt-div {
+  padding-left: -350px;
+  z-index: 1;
+  flex-align: center;
+  align-items: center;
+}
+
+span.open-div-advanced {
+  font-size: 130px;
+  letter-spacing: .055em;
+  font-family: Oswald;
+}
+
+p  {
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  line-height: 2.4;
+}
+
+#corners {
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  min-width: 200px;
+}
+
+h2.mirror {
+  font-family: Oswald;
+  letter-spacing: .5em;
+  text-align: right;
+}

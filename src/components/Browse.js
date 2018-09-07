@@ -2,18 +2,19 @@ import React, {Component} from 'react'
 import { Input } from 'mdbreact'
 import Adapter from '../Adapter.js'
 import CourseList from './CourseList.js'
+import BrowseList from './BrowseList.js'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { searchedCourses } from '../actions/actions'
 
 class Browse extends Component {
 
   state = {
-    searchTerm: '',
-    courses: []
+    searchTerm: ''
   }
 
-  passCourses = (json) => {
-    this.setState({
-      courses: json
-    })
+  componentDidMount() {
+    this.props.searchedCourses([])
   }
 
   handleChange = (e) => {
@@ -21,30 +22,22 @@ class Browse extends Component {
     this.setState({
       searchTerm: e.target.value
     })
-
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
+    let element = document.getElementById('course-row')
     Adapter.searchCourses(this.state.searchTerm)
       .then(json => {
-        this.setSearchedCourses(json.data)
+        this.props.searchedCourses(json.data)
       })
-    // if (this.state.searchTerm === null || this.state.searchTerm === "") return
     this.setState({
       searchTerm: ""
-    })
-  }
-
-  setSearchedCourses = (data) => {
-    let element = document.getElementById('course-row')
-    this.setState({
-      courses: data
     }, () => element.scrollIntoView({behavior: "smooth"}))
   }
 
   render() {
-
+    console.log(this.state)
     return (
       <div style={{backgroundColor:'rgb(255,255,244)'}}>
       <div style={{
@@ -117,19 +110,23 @@ class Browse extends Component {
                 lineHeight: '2.4'
               }}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>
               </p>
-              <a href="/browse/advanced" id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-outline-unique btn-sm my-0 ml-3 waves-effect waves-light" role="button" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', minWidth:'200px'}}>
+              <Link to="/browse/advanced" id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-outline-unique btn-sm my-0 ml-3 waves-effect waves-light" role="button" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', minWidth:'200px'}}>
                 Advanced Search<i className="fa fa-sign-in ml-2"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <CourseList courses={this.state.courses} />
+        <CourseList />
       </div>
       </div>
     )
   }
 }
 
-export default Browse
+const mapStateToProps = state => {
+  return { courses: state.courses }
+}
+
+export default connect(mapStateToProps, { searchedCourses })(Browse)

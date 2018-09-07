@@ -1,9 +1,12 @@
+import { passCourses } from './actions/actions'
+
+
 const Adapter =  {
 
   getCourses: function() {
-    return fetch("http://localhost:3000/api/v1/courses", {
-      method: "GET"
-    }).then(res => res.json())
+      return fetch("http://localhost:3000/api/v1/courses", {
+        method: "GET"
+      }).then(res => res.json())
   },
 
   searchCourses: function(searchTerm) {

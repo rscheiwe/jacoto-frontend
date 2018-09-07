@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { Responsive, Visibility } from 'semantic-ui-react'
+import  { connect } from  'react-redux'
+
 import NavBar from './components/NavbarJacoto.js'
 import CourseList from './components/CourseList.js'
 import Header from './components/Header.js'
@@ -10,14 +12,11 @@ import MidRow from './components/MidRow.js'
 import Midrow2 from './components/Midrow2.js'
 import Adapter from './Adapter.js'
 import DownloadCSV from './DownloadCSV.js'
+import { passCourses } from './actions/actions'
 
 import './App.css';
 
 class Home extends Component {
-
-  state = {
-    courses: []
-  }
 
   componentDidMount() {
     this.handleFetch()
@@ -25,14 +24,7 @@ class Home extends Component {
 
   handleFetch = () => {
     Adapter.getCourses()
-      .then(json => this.passCourses(json.data))
-      // .then(json => this.passCourses(json.courses.slice(0, 10)))
-  }
-
-  passCourses = (data) => {
-    this.setState({
-      courses: data
-    })
+      .then(json => this.props.passCourses(json.data))
   }
 
   render() {
@@ -45,15 +37,12 @@ class Home extends Component {
         <header>
         </header>
 
-          <Header />
-          <Gallery2 courses={this.state.courses}/>
+        <Header />
+        <Gallery2 />
 
-        {/*  <MidRow /> */}
-          <Midrow2 />
-          <CourseList courses={this.state.courses} />
-          <DownloadCSV data={this.state.courses} />
-
-
+        <Midrow2 />
+        <CourseList />
+        <DownloadCSV />
       </div>
       // </Visibility>
       // </Responsive>
@@ -61,4 +50,8 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return { courses: state.course }
+}
+
+export default connect(mapStateToProps, { passCourses })(Home);

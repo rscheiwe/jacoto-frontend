@@ -110,7 +110,8 @@ class Course extends Component {
               {!this.state.course ?
                 null
                 :
-                <img className="courseImageIndividual" src={this.state.course.attributes.image}/>
+                <img className="courseImageIndividual" src={this.state.course.attributes.image}
+/>
               }
 
             </div>

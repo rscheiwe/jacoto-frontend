@@ -1,13 +1,14 @@
 import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import GalleryCard from './GalleryCard.js'
-
+// connect, mapStateToProps
 import { Container } from 'mdbreact';
+import { connect } from 'react-redux'
 
-export default class Gallery2 extends React.Component {
+class Gallery2 extends React.Component {
 
   galleryItems = (courses) => {
-
+    console.log(courses);
     courses = this.props.courses.map(course => {
       return <GalleryCard course={course} />
     })
@@ -71,3 +72,9 @@ export default class Gallery2 extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return { courses: state.courses }
+}
+
+export default connect(mapStateToProps)(Gallery2)

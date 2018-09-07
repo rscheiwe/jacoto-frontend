@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Card, Icon } from 'semantic-ui-react'
 import { Col } from 'mdbreact';
 
-class CourseCard extends React.Component {
+class CourseCard extends Component {
 
   state = {
     clicked: false
@@ -20,7 +20,6 @@ class CourseCard extends React.Component {
       <Col md="4" style={{padding:'15px'}}>
         <Card id={this.props.course.id} href={`/courses/${this.props.course.id}`} className="course-card" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
         {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy-image"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
-
 
         <Card.Content>
           <h5 style={{textAlign:'center', fontFamily:'Oswald', fontColor:'black'}}>{this.props.course.attributes.title}</h5>
@@ -49,14 +48,3 @@ class CourseCard extends React.Component {
   }
 }
 export default CourseCard
-
-// <Card style={{height:'250px'}} className="zoom">
-// <CardImage className="mh-20" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" key={ this.props.course.key } />
-// <CardBody>
-// <CardTitle>{this.props.course.title}</CardTitle>
-// <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-// <Button href="#">Button</Button>
-// </CardBody>
-// </Card>
-
-// export default CourseCard

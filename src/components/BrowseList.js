@@ -1,12 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { Container } from 'mdbreact';
-// import { Grid } from 'semantic-ui-react'
 import CourseCard from './CourseCard.js'
-// import FilterMenu from './FilterMenu.js'
 
 
-const CourseList = (props) => {
+const BrowseList = (props) => {
   const courseList = props.courses.map(course => {
     return <CourseCard course={course} />
   })
@@ -23,10 +21,9 @@ const CourseList = (props) => {
         </Container>
       </div>
     </div>
+
   )
+
 }
 
-const mapStateToProps = state => state
-
-
-export default connect(mapStateToProps)(CourseList)
+export default BrowseList
