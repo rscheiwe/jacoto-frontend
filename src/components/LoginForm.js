@@ -3,16 +3,11 @@ import { Input, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
 import { Form } from 'semantic-ui-react'
 
 class LoginForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
       modal: false
     };
 
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle() {
+  toggle = () => {
     this.setState({
       modal: !this.state.modal
     });

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem } from 'mdbreact';
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { Icon } from 'semantic-ui-react'
 // import { BrowserRouter as Router } from 'react-router-dom';
 import LoginForm from './LoginForm.js'
@@ -8,23 +8,18 @@ import SignUpForm from './SignUpForm.js'
 
 
 class NavBar extends Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-          collapse: false,
-          isWideEnough: false
-      };
-    this.clicked = this.clicked.bind(this);
-  }
+  state = {
+    collapse: false,
+    isWideEnough: false
+  };
 
   clicked = () => {
     this.setState({
-        collapse: !this.state.collapse,
-      });
+      collapse: !this.state.collapse,
+    });
   }
 
 render() {
-
     return (
         <div>
 
@@ -49,6 +44,10 @@ render() {
 
                     <NavItem>
                         <Link className="nav-link" to='/about'>About</Link>
+                    </NavItem>
+
+                    <NavItem>
+                        <Link className="nav-link" to='/profile'>Profile</Link>
                     </NavItem>
                   </NavbarNav>
 
