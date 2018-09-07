@@ -1,28 +1,31 @@
 import React, { Component } from 'react'
 import Adapter from '../Adapter.js'
+import { passCourse } from '../actions/actions'
+import  { connect } from  'react-redux'
+
 
 class Course extends Component {
 
-  state = {
-    course: null
-  }
+  // state = {
+  //   course: null
+  // }
 
   componentDidMount() {
     const id = this.props.match.params.id
     Adapter.readCourse(id)
       .then(json=> {
-        this.passCourse(json.data)
+        this.props.passCourse(json.data)
       })
   }
 
-  passCourse = (data) => {
-    this.setState({
-      course: data
-    })
-  }
+  // passCourse = (data) => {
+  //   this.setState({
+  //     course: data
+  //   })
+  // }
 
   render() {
-    console.log(this.state.course)
+    // console.log(this.state.course)
     return(
       <div style={{
         height: '100vh',
@@ -66,10 +69,10 @@ class Course extends Component {
                   letterSpacing:'0.2em',
                   fontFamily:'Oswald',
                   marginLeft:'15px'
-                }}>{!this.state.course ?
+                }}>{!this.props.course ?
                     null
                     :
-                    this.state.course.attributes.title
+                    this.props.course.attributes.title
                   }
                 </span>
               </h1>
@@ -81,10 +84,10 @@ class Course extends Component {
                   letterSpacing:'0.4em',
                   lineHeight:'2.3'
                   // marginLeft:'20%'
-                }}>{!this.state.course ?
+                }}>{!this.props.course ?
                     null
                     :
-                    this.state.course.attributes.summary.substring(0,250)
+                    this.props.course.attributes.summary.substring(0,250)
                   }
 
                 </p>
@@ -93,10 +96,10 @@ class Course extends Component {
                   marginBottom:'-17px',
                   letterSpacing:'0.4em',
                   lineHeight:'2.3'
-                }}>{!this.state.course ?
+                }}>{!this.props.course ?
                     null
                     :
-                    this.state.course.attributes.slug
+                    this.props.course.attributes.slug
                   }
 
                 </p>
@@ -107,10 +110,10 @@ class Course extends Component {
               backgroundSize:'cover',
               backgroundRepeat:'no repeat'
             }}>
-              {!this.state.course ?
+              {!this.props.course ?
                 null
                 :
-                <img className="courseImageIndividual" src={this.state.course.attributes.image}
+                <img className="courseImageIndividual" src={this.props.course.attributes.image}
 />
               }
 
@@ -134,4 +137,8 @@ class Course extends Component {
   }
 }
 
-export default Course
+const mapStateToProps = state => {
+  return { course: state.course }
+}
+
+export default connect(mapStateToProps, { passCourse })(Course)

@@ -42,7 +42,6 @@ class Home extends Component {
 
         <Midrow2 />
         <CourseList />
-        <DownloadCSV />
       </div>
       // </Visibility>
       // </Responsive>

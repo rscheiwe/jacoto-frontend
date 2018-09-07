@@ -1,6 +1,7 @@
 
 const defaultState ={
-  courses: []
+  courses: [],
+  course: null
 }
 
 const rootReducer = (state = defaultState, action) => {
@@ -9,6 +10,8 @@ const rootReducer = (state = defaultState, action) => {
       return {...state, courses: action.payload }
     case 'SEARCHED_COURSES':
       return {...state, courses: action.payload }
+    case 'PASS_COURSE':
+      return {...state, course: action.payload}
     default:
       return state
     }
