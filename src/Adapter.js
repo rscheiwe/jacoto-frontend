@@ -40,8 +40,6 @@ const Adapter =  {
         })
       }).then(res => res.json())
     }
-
-
 }
 
 export default Adapter

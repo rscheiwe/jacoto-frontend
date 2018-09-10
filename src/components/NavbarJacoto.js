@@ -5,6 +5,7 @@ import { Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import LoginForm from './LoginForm.js'
 import SignUpForm from './SignUpForm.js'
+import { logoutUser } from '../actions/actions.js'
 
 
 class NavBar extends Component {
@@ -22,6 +23,8 @@ class NavBar extends Component {
   toggle = () => {
     console.log("CLICKED")
     console.log(this.props.user.id)
+    this.props.logoutUser()
+    localStorage.removeItem('token')
   }
 
 render() {
@@ -128,4 +131,4 @@ const mapStateToProps = ({ user, loggedIn }) => {
   return { user, loggedIn }
 }
 
-export default connect(mapStateToProps)(NavBar);
+export default connect(mapStateToProps, { logoutUser })(NavBar);

@@ -26,7 +26,8 @@ const rootReducer = (state = defaultState, action) => {
       return {...state, user: action.payload, loggedIn: true}
     case 'AUTHENTICATING_USER':
       return {...state, authenticatingUser: !state.authenticatingUser}
-
+    case 'LOGOUT_USER':
+      return {...state, loggedIn: false}
     default:
       return state
     }

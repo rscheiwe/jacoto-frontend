@@ -34,4 +34,29 @@ export const setCurrentUser = userData => ({
   payload: userData
 })
 
+export const loginUser = (username, pass) => {
+  return dispatch => {
+    fetch('http://localhost:3000/api/v1/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accepts': 'application/json'
+      },
+      body: JSON.stringify({ user: {
+        username: username,
+        password: pass
+      }
+      })
+    }).then(response => response.json())
+      .then(({ user, jwt }) => {
+      dispatch(setCurrentUser(user))
+      localStorage.setItem('token', jwt)
+    })
+  }
+}
+
+export const logoutUser = () => {
+  return { type: 'LOGOUT_USER' }
+}
+
 export const authenticatingUser = () => ({ type: 'AUTHENTICATING_USER' })

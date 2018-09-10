@@ -1,6 +1,9 @@
 import React from 'react';
 import { Input, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
 import { Form } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+
+import { loginUser } from '../actions/actions.js'
 
 class LoginForm extends React.Component {
   state = {
@@ -28,6 +31,7 @@ class LoginForm extends React.Component {
   }
 
   handleLogin = () => {
+    this.props.loginUser(this.state.input, this.state.pass)
     console.log(this.state.input, this.state.pass)
   }
 
@@ -58,4 +62,5 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+
+export default connect(null, {loginUser})(LoginForm);
