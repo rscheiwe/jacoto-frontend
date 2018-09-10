@@ -22,7 +22,7 @@ export const fetchCurrentUser = () => {
     })
       .then(response => response.json())
       .then(({ user }) => {
-        console.log(user)
+        // console.log(user)
         dispatch(setCurrentUser(user))
         dispatch(authenticatingUser())
       })

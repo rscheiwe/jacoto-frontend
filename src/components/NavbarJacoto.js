@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem } from 'mdbreact';
 import { Link, withRouter } from 'react-router-dom'
 import { Icon } from 'semantic-ui-react'
-// import { BrowserRouter as Router } from 'react-router-dom';
+import { connect } from 'react-redux'
 import LoginForm from './LoginForm.js'
 import SignUpForm from './SignUpForm.js'
 
@@ -19,13 +19,20 @@ class NavBar extends Component {
     });
   }
 
+  toggle = () => {
+    console.log("CLICKED")
+    console.log(this.props.user.id)
+  }
+
 render() {
+  // console.log(this.props)
     return (
         <div>
 
             <Navbar className="navbar fixed-top navbar-expand-md navbar-transparent double-nav scrolling-navbar transparent">
             { !this.state.isWideEnough && <NavbarToggler onClick={this.clicked } />}
               <NavbarBrand href="/">
+                <img src={require('./jacoto_brand.png')} width="50px" alt="brand"/>
                 <img src={require('./jacoto_logo.png')} width="100px" alt="logo"/>
               </NavbarBrand>
               <div className="float-left">
@@ -46,9 +53,13 @@ render() {
                         <Link className="nav-link" to='/about'>About</Link>
                     </NavItem>
 
-                    <NavItem>
-                        <Link className="nav-link" to='/profile'>Profile</Link>
-                    </NavItem>
+                    { this.props.loggedIn === true ?
+                      <NavItem>
+                          <Link className="nav-link" to='/profile'>Profile</Link>
+                      </NavItem>
+                      :
+                      null
+                    }
                   </NavbarNav>
 
               </Collapse>
@@ -68,7 +79,7 @@ render() {
                 <span id="dynamicContentWrapper-mainNavbar2"></span>
               </span>
             </div>
-            <img src={require('./jacoto_brand.png')} width="50px" alt="brand"/>
+
 
             <ul className="nav navbar-nav nav-flex-icons ml-auto">
 
@@ -80,14 +91,30 @@ render() {
 
             </ul>
 
-            <a id="navbar-category-pro-react" className="login-modal-form" role="button">
-              <span className="d-none d-lg-inline-block mr-1"><LoginForm /></span>
-            </a>
 
+          {
+            this.props.loggedIn === false ?
+            <div>
+              <a id="navbar-category-pro-react" className="login-modal-form" role="button">
+                <span className="d-none d-lg-inline-block mr-1"><LoginForm /></span>
+              </a>
+              <a id="navbar-category-pro-react" className="login-modal-form" role="button">
+                <span className="d-none d-lg-inline-block mr-1"><SignUpForm /></span>
+              </a>
+            </div>
+            :
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
-
-              <span className="d-none d-lg-inline-block mr-1"><SignUpForm /></span>
+              <span className="d-none d-lg-inline-block mr-1">
+                <span id="navbar-category-gettingstarted-react"
+                      onClick={this.toggle}
+                      className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light"
+                      role="button">
+                  Logout<i className="fa fa-sign-in ml-2"></i>
+                </span>
+              </span>
             </a>
+          }
+
           </Navbar>
 
 
@@ -97,10 +124,8 @@ render() {
   }
 }
 
-export default NavBar;
+const mapStateToProps = ({ user, loggedIn }) => {
+  return { user, loggedIn }
+}
 
-// <li className="nav-item ">
-// <a href="/profile/?id=0#messages" className="nav-link waves-effect headerNotifCountBadge">
-// <i className="fa fa-comments"></i><span className="sr-only">Direct messages</span>
-// </a>
-// </li>
+export default connect(mapStateToProps)(NavBar);

@@ -4,13 +4,31 @@ import { Form } from 'semantic-ui-react'
 
 class LoginForm extends React.Component {
   state = {
-      modal: false
+      modal: false,
+      input: "",
+      pass: ""
     };
 
   toggle = () => {
     this.setState({
       modal: !this.state.modal
     });
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      input: e.target.value
+    })
+  }
+
+  handlePass = (e) => {
+    this.setState({
+      pass: e.target.value
+    })
+  }
+
+  handleLogin = () => {
+    console.log(this.state.input, this.state.pass)
   }
 
   render() {
@@ -23,11 +41,13 @@ class LoginForm extends React.Component {
             <Modal isOpen={this.state.modal} toggle={this.toggle} centered>
               <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                 <ModalBody>
-                  <Input label="Your Email" icon="envelope" />
-                  <Input label="Type your password" icon="lock" />
+                <form >
+                  <Input label="Your Email" icon="envelope" onChange={this.handleChange} />
+                  <Input label="Type your password" icon="lock" onChange={this.handlePass}/>
+                </form>
                 </ModalBody>
               <ModalFooter>
-              <span id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+              <span id="navbar-category-gettingstarted-react" onClick={this.handleLogin} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
                 LOGIN<i className="fa fa-sign-in ml-2"></i>
               </span>
               </ModalFooter>

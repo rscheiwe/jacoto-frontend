@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import withAuth from '../hocs/withAuth.js'
+import UserCourseList from './UserCourseList.js'
 import { Button, Container, Grid, Header, Segment } from 'semantic-ui-react'
 
 
@@ -17,19 +18,25 @@ class Profile extends React.Component {
         marginBottom: '300px',
       },
     }
-    console.log("In PROFILE", this.props.user)
+    console.log("In PROFILE", this.props.user.courses)
     return (
       <div style={{backgroundColor:'rgb(255,255,244)'}}>
 
       <Header as='h3' content={this.props.user.username} textAlign='center' style={style.h3} />
-<Container>
+      <Container>
         <Grid columns={2} stackable>
          <Grid.Column>
-           <Segment><center><img src={this.props.user.avatar} /></center></Segment>
+           <Segment><center><img src={this.props.user.avatar} className="responsive" alt="profile"/></center></Segment>
          </Grid.Column>
          <Grid.Column>
-           <Segment>{this.props.user.user_courses}</Segment>
+           <Segment>CONTENT</Segment>
          </Grid.Column>
+         </Grid>
+
+         <span>
+         <UserCourseList usercourses={this.props.user.courses} />
+         </span>
+
 
          <Grid >
            <Grid.Column width={5}>
@@ -44,13 +51,6 @@ class Profile extends React.Component {
          </Grid>
 
 
-         <Grid.Column width={10}>
-           <Segment>Content</Segment>
-         </Grid.Column>
-         <Grid.Column width={6}>
-           <Segment>Content</Segment>
-         </Grid.Column>
-        </Grid>
         </Container>
 
       </div>

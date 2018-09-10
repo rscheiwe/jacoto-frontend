@@ -7,6 +7,8 @@ import CourseCard from './CourseCard.js'
 
 
 const CourseList = (props) => {
+
+  // console.log(props.usercourses)
   const courseList = props.courses.map(course => {
     return <CourseCard course={course} />
   })
