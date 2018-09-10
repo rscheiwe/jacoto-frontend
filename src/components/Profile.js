@@ -6,10 +6,6 @@ import { Button, Container, Grid, Header, Segment } from 'semantic-ui-react'
 
 class Profile extends React.Component {
 
-
-
-
-
   render() {
 
     const style = {
@@ -21,29 +17,33 @@ class Profile extends React.Component {
         marginBottom: '300px',
       },
     }
-    console.log("In PROFILE", this.props.user.username)
+    console.log("In PROFILE", this.props.user)
     return (
       <div style={{backgroundColor:'rgb(255,255,244)'}}>
+
+      <Header as='h3' content={this.props.user.username} textAlign='center' style={style.h3} />
 <Container>
-      <Header as='h3' content='Stackable Grid' textAlign='center' style={style.h3} />
         <Grid columns={2} stackable>
          <Grid.Column>
-           <Segment>Content</Segment>
+           <Segment><center><img src={this.props.user.avatar} /></center></Segment>
          </Grid.Column>
          <Grid.Column>
-           <Segment>Content</Segment>
+           <Segment>{this.props.user.user_courses}</Segment>
          </Grid.Column>
-         <Grid.Row columns={3}>
-           <Grid.Column>
+
+         <Grid >
+           <Grid.Column width={5}>
              <Segment>Content</Segment>
            </Grid.Column>
-           <Grid.Column>
+           <Grid.Column width={6}>
              <Segment>Content</Segment>
            </Grid.Column>
-           <Grid.Column>
+           <Grid.Column width={5}>
              <Segment>Content</Segment>
            </Grid.Column>
-         </Grid.Row>
+         </Grid>
+
+
          <Grid.Column width={10}>
            <Segment>Content</Segment>
          </Grid.Column>
@@ -51,7 +51,8 @@ class Profile extends React.Component {
            <Segment>Content</Segment>
          </Grid.Column>
         </Grid>
-</Container>
+        </Container>
+
       </div>
     )
   }

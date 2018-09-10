@@ -17,7 +17,8 @@ const withAuth = WrappedComponent => {
 
     render() {
       // console.log(this.props)
-      if (localStorage.getItem('token') && this.props.loggedIn) {
+       // if (localStorage.getItem('token')&& this.props.loggedIn)
+      if (localStorage.getItem('token')) {
         return <WrappedComponent />
       } else if (localStorage.getItem('token') && this.props.authenticatingUser) {
         return <Loader active inline="centered" />

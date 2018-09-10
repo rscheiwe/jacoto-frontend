@@ -4,7 +4,8 @@ const defaultState ={
   course: null,
   user: {
     id: null,
-    username: null
+    username: null,
+    user_courses: []
   },
   loggedIn: false,
   authenticatingUser: false,
