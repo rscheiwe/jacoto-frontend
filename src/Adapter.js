@@ -1,4 +1,4 @@
-import { passCourses } from './actions/actions'
+// import { passCourses } from './actions/actions'
 
 
 const Adapter =  {

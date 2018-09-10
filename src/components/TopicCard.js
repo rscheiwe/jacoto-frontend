@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Icon } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 import { Col } from 'mdbreact';
 
 class TopicCard extends React.Component {
@@ -23,7 +23,7 @@ class TopicCard extends React.Component {
     } else if (e.target.className.includes("length")) {
 
     } else if (e.target.className.includes("provider")) {
-      
+
     }
 
   }

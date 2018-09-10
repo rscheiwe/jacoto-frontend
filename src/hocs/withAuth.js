@@ -16,7 +16,7 @@ const withAuth = WrappedComponent => {
 
 
     render() {
-      console.log(this.props)
+      // console.log(this.props)
       if (localStorage.getItem('token') && this.props.loggedIn) {
         return <WrappedComponent />
       } else if (localStorage.getItem('token') && this.props.authenticatingUser) {
@@ -33,7 +33,7 @@ const withAuth = WrappedComponent => {
 }
 
 const mapStateToProps = (state ) => {
-  console.log(state)
+  // console.log(state)
   return {
   user: state.user,
   loggedIn: state.loggedIn,

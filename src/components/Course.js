@@ -113,7 +113,7 @@ class Course extends Component {
               {!this.props.course ?
                 null
                 :
-                <img className="courseImageIndividual" src={this.props.course.attributes.image}
+                <img className="courseImageIndividual" alt="course00xci" src={this.props.course.attributes.image}
 />
               }
 

@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 class Gallery2 extends React.Component {
 
   galleryItems = (courses) => {
-    console.log(courses);
+    // console.log(courses);
     courses = this.props.courses.map(course => {
       return <GalleryCard course={course} />
     })
@@ -33,7 +33,7 @@ class Gallery2 extends React.Component {
 
 
   render() {
-    console.log(this.props.courses)
+    // console.log(this.props.courses)
 
     const courses = this.galleryItems(this.props.courses);
     // const activeItemIndex = 0

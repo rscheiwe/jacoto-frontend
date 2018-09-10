@@ -4,8 +4,8 @@ import BrowseList from './BrowseList.js'
 import TopicCard from './TopicCard.js'
 import AdvancedSearchCard from './AdvancedSearchCard.js'
 import ItemsCarousel from 'react-items-carousel';
-import { Container, Divider } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import { Container } from 'semantic-ui-react'
+// import { Link } from 'react-router-dom'
 import '../Browse.css'
 
 class AdvancedSearch extends Component {
@@ -82,7 +82,7 @@ class AdvancedSearch extends Component {
   changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });
 
   render() {
-
+    console.log(this.state.courses)
     const {
           activeItemIndex,
           clicked
@@ -94,7 +94,7 @@ class AdvancedSearch extends Component {
           <div className='blanket-div'>
             <div className='flex-div'>
               <div className='img-div'>
-                  <img className='img-back-advanced' src={require('./jacoto_book.jpg')} />
+                  <img className='img-back-advanced' alt="" src={require('./jacoto_book.jpg')} />
               </div>
               <div className='txt-div'>
                 <h1>

@@ -21,9 +21,9 @@ class SignUpForm extends React.Component {
   render() {
     return (
       <div>
-        <a id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-unique btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+        <span id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-unique btn-sm my-0 ml-3 waves-effect waves-light" role="button">
           Sign Up<i className="fa fa-user-plus ml-2"></i>
-        </a>
+        </span>
           {/*<Button className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" onClick={this.toggle}>Login<i className="fa fa-sign-in ml-2"></i></Button>*/}
           <Form>
             <Modal isOpen={this.state.modal} toggle={this.toggle} centered>
@@ -34,9 +34,9 @@ class SignUpForm extends React.Component {
                 </ModalBody>
               <ModalFooter>
               <Form.Checkbox inline label='I agree to the terms and conditions' required />
-              <a id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+              <span id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
                 Sign Up<i className="fa fa-user-plus ml-2"></i>
-              </a>
+              </span>
               </ModalFooter>
             </Modal>
           </Form>
