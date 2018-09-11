@@ -332,12 +332,12 @@ body{
   position: absolute;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  height: 50%;
+  width: 50%;
   opacity: 0;
   transition: .5s ease;
   background-color: #880e4f;
@@ -354,4 +354,17 @@ body{
   transform: translate(-50%, -50%);
   text-align: center;
   font-family: Oswald
+}
+
+#test {
+
+    text-align: center;
+
+    -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
+
+}
+
+@keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }

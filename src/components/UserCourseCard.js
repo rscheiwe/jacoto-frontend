@@ -30,7 +30,7 @@ class UserCourseCard extends Component {
         </Card.Content>
         <div className="overlay">
           <div className="text">
-            {this.props.course.title}
+            
             <img src={require('./Udacity_logo.png')} style={{width:'250px'}} alt="provideroxxs1"/>
           </div>
         </div>

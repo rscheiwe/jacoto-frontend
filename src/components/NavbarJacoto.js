@@ -21,8 +21,8 @@ class NavBar extends Component {
   }
 
   toggle = () => {
-    console.log("CLICKED")
-    console.log(this.props.user.id)
+    // console.log("CLICKED")
+    // console.log(this.props.user.id)
     this.props.logoutUser()
     localStorage.removeItem('token')
   }

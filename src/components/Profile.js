@@ -34,6 +34,8 @@ class Profile extends React.Component {
          </Grid>
 
          <span>
+         <h2 style={{fontFamily:'Oswald', letterSpacing:'.5em', textAlign:'right'}}>Your Courses</h2>
+         <hr />
          <UserCourseList usercourses={this.props.user.courses} />
          </span>
 

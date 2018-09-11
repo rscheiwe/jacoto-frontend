@@ -34,7 +34,7 @@ class GalleryCard extends React.Component {
 
           <div className="overlay">
             <div className="text">
-              {this.props.course.attributes.title}
+              
               <img src={require('./Udacity_logo.png')} alt="provider00d2" style={{width:'250px'}}/>
             </div>
           </div>
