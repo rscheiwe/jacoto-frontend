@@ -59,4 +59,8 @@ export const logoutUser = () => {
   return { type: 'LOGOUT_USER' }
 }
 
+export const addCourseToUser = (course) => {
+  return { type: 'ADD_COURSE_TO_USER', payload: course }
+}
+
 export const authenticatingUser = () => ({ type: 'AUTHENTICATING_USER' })

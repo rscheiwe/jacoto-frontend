@@ -110,7 +110,7 @@ render() {
               <span className="d-none d-lg-inline-block mr-1">
                 <span id="navbar-category-gettingstarted-react"
                       onClick={this.toggle}
-                      className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light"
+                      className="btn btn-outline-unique btn-sm my-0 ml-3 waves-effect waves-light"
                       role="button">
                   Logout<i className="fa fa-sign-in ml-2"></i>
                 </span>

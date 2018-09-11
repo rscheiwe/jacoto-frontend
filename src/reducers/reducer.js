@@ -5,7 +5,7 @@ const defaultState ={
   user: {
     id: null,
     username: null,
-    user_courses: []
+    courses: []
   },
   loggedIn: false,
   authenticatingUser: false,
@@ -22,12 +22,18 @@ const rootReducer = (state = defaultState, action) => {
     case 'PASS_COURSE':
       return {...state, course: action.payload}
     case 'SET_CURRENT_USER':
-
       return {...state, user: action.payload, loggedIn: true}
     case 'AUTHENTICATING_USER':
       return {...state, authenticatingUser: !state.authenticatingUser}
     case 'LOGOUT_USER':
       return {...state, loggedIn: false}
+    case 'ADD_COURSE_TO_USER':
+    // console.log(action)
+      return {...state,
+        user:{
+          ...state.user,
+          courses: [...state.user.courses, action.payload] }
+        }
     default:
       return state
     }

@@ -39,6 +39,20 @@ const Adapter =  {
           topic: topic
         })
       }).then(res => res.json())
+    },
+
+    addCourse: function(user_id, course_id) {
+      return fetch("http://localhost:3000/api/v1/user_courses", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accepts': 'application/json'
+        },
+        body: JSON.stringify({
+          user_id: user_id,
+          course_id: course_id
+        })
+      }).then(res => res.json())
     }
 }
 
