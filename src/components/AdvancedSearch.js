@@ -54,28 +54,28 @@ class AdvancedSearch extends Component {
         return topicList = topics.map(topic => {
           return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
         })
-        break
+
       case 'price':
         key = "price"
         prices = ["free", "cost"]
         return topicList = prices.map(topic => {
           return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
         })
-        break
+
       case 'length':
         key = "length"
         lengths = ["self-paced", "<1 Month", "<6 Months"]
         return topicList = lengths.map(topic => {
           return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
         })
-        break
+
       case 'provider':
         key = "provider"
         providers = ["MIT", "Udacity", "edX", "Coursera"]
         return topicList = providers.map(topic => {
           return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
         })
-        break
+
       }
     }
 

@@ -63,4 +63,8 @@ export const addCourseToUser = (course) => {
   return { type: 'ADD_COURSE_TO_USER', payload: course }
 }
 
+export const removeCourseFromUser = (courseid) => {
+  return { type: 'REMOVE_COURSE_FROM_USER', payload: courseid }
+}
+
 export const authenticatingUser = () => ({ type: 'AUTHENTICATING_USER' })

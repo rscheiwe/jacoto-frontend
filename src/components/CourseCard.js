@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Adapter from '../Adapter.js'
 import { Card, Icon, Segment, Header, Dimmer, Image } from 'semantic-ui-react'
 import { Col } from 'mdbreact';
-import { addCourseToUser } from '../actions/actions.js'
+import { addCourseToUser, removeCourseFromUser } from '../actions/actions.js'
 
 class CourseCard extends Component {
 
@@ -28,14 +28,25 @@ class CourseCard extends Component {
   }
 
   handleCoursePass = (course_id) => {
-    Adapter.addCourse(this.props.user.id, course_id)
-    .then(json => {
-      this.props.addCourseToUser(json)
-    })
-    .then(this.display())
-    .then(setTimeout(() => {
-      this.handleHide()
-    }, 1500))
+    if (this.state.clicked === false) {
+      Adapter.addCourse(this.props.user.id, course_id)
+      .then(json => {
+        this.props.addCourseToUser(json)
+      })
+      .then(this.display())
+      .then(setTimeout(() => {
+        this.handleHide()
+      }, 1500))
+    } else {
+      Adapter.addCourse(this.props.user.id, course_id)
+      .then(json => {
+        this.props.removeCourseFromUser(parseInt(json.data.course_id))
+      })
+      .then(this.display())
+      .then(setTimeout(() => {
+        this.handleHide()
+      }, 1500))
+    }
 
   }
 
@@ -110,6 +121,6 @@ const mapStateToProps = ({ user, loggedIn }) => {
   return { user, loggedIn }
 }
 
-export default connect(mapStateToProps, { addCourseToUser })(CourseCard)
+export default connect(mapStateToProps, { addCourseToUser, removeCourseFromUser })(CourseCard)
 
 // export default CourseCard

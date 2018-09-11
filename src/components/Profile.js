@@ -18,7 +18,6 @@ class Profile extends React.Component {
         marginBottom: '300px',
       },
     }
-    console.log("In PROFILE", this.props.user.courses)
     return (
       <div style={{backgroundColor:'rgb(255,255,244)'}}>
 

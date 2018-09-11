@@ -32,8 +32,17 @@ const rootReducer = (state = defaultState, action) => {
       return {...state,
         user:{
           ...state.user,
-          courses: [...state.user.courses, action.payload] }
+          courses: [...state.user.courses, action.payload]
         }
+      }
+    case 'REMOVE_COURSE_FROM_USER':
+    console.log(action.payload)
+      return {...state,
+        user: {
+          ...state.user,
+          courses: state.user.courses.filter( course => course.id !== action.payload )
+        }
+      }
     default:
       return state
     }
