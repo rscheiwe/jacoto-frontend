@@ -1,21 +1,43 @@
 import React from 'react';
 import { Input, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
 import { Form } from 'semantic-ui-react'
+import { signUpUser } from '../actions/actions.js'
+import { connect } from 'react-redux'
 
 class SignUpForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      modal: false
+
+  state = {
+      modal: false,
+      input: "",
+      pass: ""
     };
 
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle() {
+  toggle = () => {
     this.setState({
       modal: !this.state.modal
     });
+  }
+
+  toggle = () => {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      input: e.target.value
+    })
+  }
+
+  handlePass = (e) => {
+    this.setState({
+      pass: e.target.value
+    })
+  }
+
+  handleSignup = () => {
+    this.props.signUpUser(this.state.input, this.state.pass)
   }
 
   render() {
@@ -29,15 +51,16 @@ class SignUpForm extends React.Component {
             <Modal isOpen={this.state.modal} toggle={this.toggle} centered>
               <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                 <ModalBody>
-                  <Input label="Your Email" icon="envelope" />
-                  <Input label="Type your password" icon="lock" />
+                  <Input label="Your Email" icon="envelope" onChange={this.handleChange}/>
+                  <Input label="Type your password" icon="lock" onChange={this.handlePass}/>
                 </ModalBody>
-              <ModalFooter>
-              <Form.Checkbox inline label='I agree to the terms and conditions' required />
-              <span id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
-                Sign Up<i className="fa fa-user-plus ml-2"></i>
-              </span>
-              </ModalFooter>
+                <ModalFooter>
+                  <Form.Checkbox inline label='I agree to the terms and conditions' required />
+                </ModalFooter>
+                <span id="navbar-category-gettingstarted-react" onClick={this.handleSignup} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+                  Sign Up<i className="fa fa-user-plus ml-2"></i>
+                </span>
+              <br />
             </Modal>
           </Form>
         </div>
@@ -45,4 +68,4 @@ class SignUpForm extends React.Component {
   }
 }
 
-export default SignUpForm;
+export default connect(null, {signUpUser})(SignUpForm);

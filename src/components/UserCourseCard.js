@@ -116,7 +116,7 @@ class CourseCard extends Component {
              <span onClick={this.handleCheck} id={this.props.course.id}>
 
                {
-                 this.state.checked === true ?
+                 (this.state.checked === true || (this.props.user && this.props.user.courses.find(course => course.id === parseInt(this.props.course.id, 10)))) ?
                  <Icon name="check circle outline" className="heart-colored" id={this.props.course.id}/>
                  :
                  <Icon name='chart line' id={this.props.course.id}/>

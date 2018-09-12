@@ -55,6 +55,27 @@ export const loginUser = (username, pass) => {
   }
 }
 
+export const signUpUser = (username, pass) => {
+  return dispatch => {
+    fetch('http://localhost:3000/api/v1/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accepts': 'application/json'
+      },
+      body: JSON.stringify({user: {
+        username: username,
+        password: pass
+      }
+      })
+    }).then(response => response.json())
+      .then(({ user, jwt }) => {
+      dispatch(setCurrentUser(user))
+      localStorage.setItem('token', jwt)
+    })
+  }
+}
+
 export const logoutUser = () => {
   return { type: 'LOGOUT_USER' }
 }

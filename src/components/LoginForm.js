@@ -32,13 +32,13 @@ class LoginForm extends React.Component {
 
   handleLogin = () => {
     this.props.loginUser(this.state.input, this.state.pass)
-    console.log(this.state.input, this.state.pass)
+    // console.log(this.state.input, this.state.pass)
   }
 
   render() {
     return (
       <div>
-        <span id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+        <span id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
           LOGIN<i className="fa fa-sign-in ml-2"></i>
         </span>
           <Form>

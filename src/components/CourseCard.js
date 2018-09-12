@@ -68,7 +68,7 @@ class CourseCard extends Component {
         }
 
         <Dimmer active={this.state.active} inverted onClickOutside={this.handleHide} style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
-          <h4 style={{textAlign:'center', fontFamily:'Oswald', fontColor:'black', marginTop:'40%'}}>Added: <hr /> <i>{this.props.course.attributes.title} </i><br />to your favorites</h4>
+          <h4 style={{textAlign:'center', fontFamily:'Oswald', fontColor:'black', marginTop:'50%'}}>Added: <hr /> <i>{this.props.course.attributes.title} </i><br />to your favorites</h4>
         </Dimmer>
 
         <Card.Content>

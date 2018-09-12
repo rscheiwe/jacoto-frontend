@@ -26,14 +26,14 @@ class Browse extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    let element = document.getElementById('course-row')
+    let element = document.getElementById('footer-dead')
     Adapter.searchCourses(this.state.searchTerm)
       .then(json => {
         this.props.searchedCourses(json.data)
       })
     this.setState({
       searchTerm: ""
-    }, () => element.scrollIntoView({behavior: "smooth"}))
+    }, () => element.scrollIntoView({behavior: "smooth", block: "end", inline: "center"}))
   }
 
   render() {
@@ -120,6 +120,7 @@ class Browse extends Component {
       <div>
         <CourseList />
       </div>
+      <div id="dead-row" />
       </div>
     )
   }
