@@ -11,7 +11,8 @@ import { logoutUser } from '../actions/actions.js'
 class NavBar extends Component {
   state = {
     collapse: false,
-    isWideEnough: false
+    isWideEnough: false,
+    refresh: false
   };
 
   clicked = () => {
@@ -25,6 +26,7 @@ class NavBar extends Component {
     // console.log(this.props.user.id)
     this.props.logoutUser()
     localStorage.removeItem('token')
+
   }
 
 render() {
@@ -34,11 +36,15 @@ render() {
 
             <Navbar className="navbar fixed-top navbar-expand-md navbar-transparent double-nav scrolling-navbar transparent">
             { !this.state.isWideEnough && <NavbarToggler onClick={this.clicked } />}
-              <NavbarBrand href="/">
-                <img src={require('./jacoto_brand.png')} width="50px" alt="brand"/>
-                <img src={require('./jacoto_logo.png')} width="100px" alt="logo"/>
-              </NavbarBrand>
-              <div className="float-left">
+
+            <a href='/'><div className="hoja-nav">
+                <NavbarBrand href="/">
+                <img src={require('./jacoto_logo.png')} width="90px" style={{marginLeft:'-10px'}} alt="logo"/>
+
+                </NavbarBrand>
+              </div></a>
+
+              <div className="float-left" style={{paddingLeft:'35px'}}>
                 <a onClick={this.clicked} ><i className="fa fa-bars"></i><span className="sr-only" aria-hidden="true">Toggle side navigation</span></a>
               </div>
                 <Collapse isOpen = { this.state.collapse } >
