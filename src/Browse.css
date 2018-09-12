@@ -68,3 +68,9 @@ h2.mirror {
   letter-spacing: .5em;
   text-align: right;
 }
+
+.profile-button {
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  width:auto;
+  opacity:0.2;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem } from 'mdbreact';
-import { Link, withRouter } from 'react-router-dom'
-import { Icon } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+import { Icon, Button } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import LoginForm from './LoginForm.js'
 import SignUpForm from './SignUpForm.js'
@@ -44,29 +44,29 @@ render() {
                 <Collapse isOpen = { this.state.collapse } >
 
                   <NavbarNav left>
-                    <NavItem active>
-                        <Link className="nav-link" to='/'>Home</Link>
-                    </NavItem>
 
-                    <NavItem>
-                        <Link className="nav-link" to='/browse'>Browse</Link>
-                    </NavItem>
+                    <a href="/browse" id="navbar-category-pro-react" className="profile-trigger" role="button">
+                      <span className="d-none d-lg-inline-block mr-1">
+                          <span id="navbar-category-gettingstarted-react"
+                                className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light"
+                                role="button">Browse<i className="fa fa-search ml-2"></i>
+                          </span>
+                      </span>
+                    </a>
+                    <a href="/about" id="navbar-category-pro-react" className="profile-trigger" role="button">
+                      <span className="d-none d-lg-inline-block mr-1">
+                          <span id="navbar-category-gettingstarted-react"
+                                className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light"
+                                role="button">About<i className="fa fa-info ml-2"></i>
+                          </span>
+                      </span>
+                    </a>
 
-                    <NavItem>
-                        <Link className="nav-link" to='/about'>About</Link>
-                    </NavItem>
 
-                    { this.props.loggedIn === true ?
-                      <NavItem>
-                          <Link className="nav-link" to='/profile'>Profile</Link>
-                      </NavItem>
-                      :
-                      null
-                    }
                   </NavbarNav>
 
               </Collapse>
-
+{/*
               <div className="mr-auto">
                 <span className="d-none d-md-inline-block">
 
@@ -82,19 +82,14 @@ render() {
                 <span id="dynamicContentWrapper-mainNavbar2"></span>
               </span>
             </div>
-
-
+          */}
             <ul className="nav navbar-nav nav-flex-icons ml-auto">
-
               <li className="nav-item">
                 <a href="/contact" data-toggle="modal" data-target="#contactForm" className="nav-link waves-effect">
                   <Icon link name='envelope outline' /><span className="sr-only">Contact us</span>
                 </a>
               </li>
-
             </ul>
-
-
           {
             this.props.loggedIn === false ?
             <div>
@@ -106,6 +101,16 @@ render() {
               </a>
             </div>
             :
+            <div>
+            <a href="/profile" id="navbar-category-pro-react" className="profile-trigger" role="button">
+              <span className="d-none d-lg-inline-block mr-1">
+                <span id="navbar-category-gettingstarted-react"
+                      className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light"
+                      role="button">Profile<i className="fa fa-user ml-2"></i>
+                </span>
+              </span>
+            </a>
+
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
               <span className="d-none d-lg-inline-block mr-1">
                 <span id="navbar-category-gettingstarted-react"
@@ -116,12 +121,9 @@ render() {
                 </span>
               </span>
             </a>
+            </div>
           }
-
           </Navbar>
-
-
-
       </div>
     );
   }

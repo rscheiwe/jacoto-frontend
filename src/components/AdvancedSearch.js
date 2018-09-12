@@ -17,19 +17,21 @@ class AdvancedSearch extends Component {
   }
 
   toggle = (e) => {
+    console.log("HERE", e.target.id)
     switch (e.target.id) {
-      case 'topic-search' || 'topic-search-text' || 'topic-search-font':
+      case 'topic-search-font':
         this.setState({ courses: [], clicked: "topics" })
         break
-      case 'price-search' || 'price-search-text' || 'price-search-font':
+      case 'price-search-font':
         this.setState({ courses: [], clicked: "price" })
         break
-      case 'length-search' || 'length-search-text' || 'length-search-font':
+      case 'length-search-font':
         this.setState({ courses: [], clicked: "length" })
         break
-      case 'provider-search' || 'provider-search-text' || 'provider-search-font':
+      case 'provider-search-font':
         this.setState({ courses: [], clicked: "provider" })
         break
+
     }
   }
 

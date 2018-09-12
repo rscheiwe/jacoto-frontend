@@ -1,18 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import { Container } from 'mdbreact';
 import UserCourseCard from './UserCourseCard.js'
 
 
 const UserCourseList = (props) => {
-  let courseList;
-  !props.usercourses ?
+  let courseList = !props.usercourses ?
+
   null
+
   :
 
-  courseList = props.usercourses.map(course => {
-    return <UserCourseCard course={course} />
+  props.usercourses.map(course => {
+    return <UserCourseCard course={course} key={course.id} />
   })
+
 
   return (
 

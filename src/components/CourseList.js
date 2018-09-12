@@ -10,7 +10,7 @@ const CourseList = (props) => {
 
   // console.log(props.usercourses)
   const courseList = props.courses.map(course => {
-    return <CourseCard course={course} />
+    return <CourseCard course={course} key={course.id}/>
   })
 
   return (

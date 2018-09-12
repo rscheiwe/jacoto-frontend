@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Adapter from '../Adapter.js'
-import { Card, Icon, Dimmer } from 'semantic-ui-react'
+import { Card, Icon, Dimmer, Popup } from 'semantic-ui-react'
 import { Col } from 'mdbreact';
 import { removeCourseFromUser } from '../actions/actions.js'
 
@@ -10,6 +10,7 @@ class CourseCard extends Component {
 
   state = {
     clicked: false,
+    checked: false,
     animation: 'fade',
     active: false,
     duration: 1500,
@@ -28,10 +29,18 @@ class CourseCard extends Component {
     // console.log(e.target.id)
   }
 
+  handleCheck = (e) => {
+    this.setState((prevState) => {
+      return { checked: !prevState.checked }
+    })
+    // this.handleCoursePass(e.target.id)
+    // // console.log(e.target.id)
+  }
+
   handleCoursePass = (course_id) => {
     Adapter.addCourse(this.props.user.id, course_id)
     .then(json => {
-      this.props.removeCourseFromUser(parseInt(json.data.course_id))
+      this.props.removeCourseFromUser(parseInt(json.data.course_id, 10))
     })
     .then(this.display())
     .then(setTimeout(() => {
@@ -41,7 +50,13 @@ class CourseCard extends Component {
   }
 
   render() {
-    // console.log(this.state.added_course)
+
+    const style = {
+      borderRadius: 0,
+      opacity: 0.8,
+      padding: '2em',
+    }
+        // console.log(this.state.added_course)
     return (
       // <div className="d-flex flex-wrap">
       <Col md="4" style={{padding:'15px'}}>
@@ -86,7 +101,7 @@ class CourseCard extends Component {
            <span onClick={this.handleClick} id={this.props.course.id}>
 
              {
-               (this.state.clicked === true || (this.props.user && this.props.user.courses.find(course => course.id === parseInt(this.props.course.id)))) ?
+               (this.state.clicked === true || (this.props.user && this.props.user.courses.find(course => course.id === parseInt(this.props.course.id, 10)))) ?
                <Icon name="heart" className="heart-colored" id={this.props.course.id}/>
                :
                <Icon name='heart outline' id={this.props.course.id}/>
@@ -96,9 +111,21 @@ class CourseCard extends Component {
           null
         }
 
-          <span>
-            <Icon name='fork'/>
-          </span>
+        {
+            this.props.loggedIn === true ?
+             <span onClick={this.handleCheck} id={this.props.course.id}>
+
+               {
+                 this.state.checked === true ?
+                 <Icon name="check circle outline" className="heart-colored" id={this.props.course.id}/>
+                 :
+                 <Icon name='chart line' id={this.props.course.id}/>
+               }
+            </span>
+            :
+            null
+          }
+
 
         </Card.Content>
       </Card>

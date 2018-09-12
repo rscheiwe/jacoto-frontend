@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import withAuth from '../hocs/withAuth.js'
 import UserCourseList from './UserCourseList.js'
-import { Button, Container, Grid, Header, Segment } from 'semantic-ui-react'
+import { Container, Grid, Header, Segment } from 'semantic-ui-react'
 
 
 class Profile extends React.Component {

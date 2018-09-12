@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Adapter from '../Adapter.js'
-import { Card, Icon, Segment, Header, Dimmer, Image } from 'semantic-ui-react'
+import { Card, Icon, Dimmer } from 'semantic-ui-react'
 import { Col } from 'mdbreact';
 import { addCourseToUser, removeCourseFromUser } from '../actions/actions.js'
 
@@ -40,7 +40,7 @@ class CourseCard extends Component {
     } else {
       Adapter.addCourse(this.props.user.id, course_id)
       .then(json => {
-        this.props.removeCourseFromUser(parseInt(json.data.course_id))
+        this.props.removeCourseFromUser(parseInt(json.data.course_id, 10))
       })
       .then(this.display())
       .then(setTimeout(() => {
@@ -68,7 +68,7 @@ class CourseCard extends Component {
         }
 
         <Dimmer active={this.state.active} inverted onClickOutside={this.handleHide} style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}>
-          <h4 style={{textAlign:'center', fontFamily:'Oswald', fontColor:'black', marginTop:'50%'}}>{this.props.course.attributes.title}</h4>
+          <h4 style={{textAlign:'center', fontFamily:'Oswald', fontColor:'black', marginTop:'40%'}}>Added: <hr /> <i>{this.props.course.attributes.title} </i><br />to your favorites</h4>
         </Dimmer>
 
         <Card.Content>
@@ -95,7 +95,7 @@ class CourseCard extends Component {
            <span onClick={this.handleClick} id={this.props.course.id}>
 
              {
-               (this.state.clicked === true || (this.props.user && this.props.user.courses.find(course => course.id === parseInt(this.props.course.id)))) ?
+               (this.state.clicked === true || (this.props.user && this.props.user.courses.find(course => course.id === parseInt(this.props.course.id, 10)))) ?
                <Icon name="heart" className="heart-colored" id={this.props.course.id}/>
                :
                <Icon name='heart outline' id={this.props.course.id}/>
