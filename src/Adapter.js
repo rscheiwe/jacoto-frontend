@@ -4,13 +4,13 @@
 const Adapter =  {
 
   getCourses: function() {
-      return fetch("http://localhost:3000/api/v1/courses", {
+      return fetch("http://jacoto-api.herokuapp.com/api/v1/courses", {
         method: "GET"
       }).then(res => res.json())
   },
 
   searchCourses: function(searchTerm) {
-    return fetch("http://localhost:3000/api/v1/queries", {
+    return fetch("http://jacoto-api.herokuapp.com/api/v1/queries", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -23,13 +23,13 @@ const Adapter =  {
     },
 
     readCourse: function(id) {
-      return fetch(`http://localhost:3000/api/v1/courses/${id}`, {
+      return fetch(`http://jacoto-api.herokuapp.com/api/v1/courses/${id}`, {
         method: "GET"
       }).then(res => res.json())
     },
 
     topicCourses: function(topic) {
-      return fetch("http://localhost:3000/api/v1/queries", {
+      return fetch("http://jacoto-api.herokuapp.com/api/v1/queries", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const Adapter =  {
     },
 
     addCourse: function(user_id, course_id) {
-      return fetch("http://localhost:3000/api/v1/user_courses", {
+      return fetch("http://jacoto-api.herokuapp.com/api/v1/user_courses", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ export const fetchCurrentUser = () => {
   // takes the token in localStorage and finds out who it belongs to
   return dispatch => {
     dispatch(authenticatingUser())
-    fetch('http://localhost:3000/api/v1/profile', {
+    fetch('http://jacoto-api.herokuapp.com/api/v1/profile', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -36,7 +36,7 @@ export const setCurrentUser = userData => ({
 
 export const loginUser = (username, pass) => {
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/login', {
+    fetch('http://jacoto-api.herokuapp.com/api/v1/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export const loginUser = (username, pass) => {
 
 export const signUpUser = (username, pass) => {
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/users', {
+    fetch('http://jacoto-api.herokuapp.com/api/v1/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
