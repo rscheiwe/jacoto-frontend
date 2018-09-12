@@ -39,7 +39,7 @@ render() {
 
             <a href='/'><div className="hoja-nav">
                 <NavbarBrand href="/">
-                <img src={require('./jacoto_logo.png')} width="90px" style={{marginLeft:'-10px'}} alt="logo"/>
+                <img src='/images/jacoto_logo.png' width="90px" style={{marginLeft:'-10px'}} alt="logo"/>
 
                 </NavbarBrand>
               </div></a>

@@ -12,7 +12,7 @@ const MidRow = () => {
           </Grid.Column>
 
           <Grid.Column width={8} style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-              <img src={require('./jacoto_book.jpg')} width="500px" alt="" />
+              <img src='/images/jacoto_book.jpg' width="500px" alt="" />
           </Grid.Column>
         </Grid.Row>
       </Grid>

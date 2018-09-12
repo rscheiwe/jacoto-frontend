@@ -58,7 +58,7 @@ const Midrow2 = () => {
             right:'18px',
             zIndex:'0'
           }}>
-              <img src={require('./jacoto_book.jpg')}
+              <img src='/images/jacoto_book.jpg'
                 style={{
                   width:"100%",
                   backgroundSize:'cover'

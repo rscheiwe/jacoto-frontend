@@ -70,7 +70,7 @@ class Browse extends Component {
             right:'18px',
             // zIndex:'0',
           }}>
-              <img src={require('./jacoto_book.jpg')}
+              <img src='/images/jacoto_book_red.jpg'
                 style={{
                   width:"150%",
                   backgroundSize:'cover',

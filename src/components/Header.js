@@ -18,7 +18,7 @@ const Header = () => {
                 <span className="advancedElement">
                 </span>
                   <span className='open-div-advanced'>
-                    <img src={require('./jacoto_logo.png')} alt="" width="400px"/>
+                    <img src='/images/jacoto_logo.png' alt="" width="400px"/>
                   </span>
               </h1>
               <p className='mirror-div'><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>

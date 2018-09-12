@@ -19,7 +19,7 @@ class FooterPage extends React.Component {
                 <Col sm="4">
                 <a href='/'><div className='hoja'>
                   <div className="footer-copyright text-center py-3" >
-                    <img src={require('./jacoto_logo.png')} width="80px" alt="logo" />
+                    <img src='/images/jacoto_logo.png' width="80px" alt="logo" />
                   </div>
                   </div></a>
                 </Col>
