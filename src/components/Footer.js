@@ -4,12 +4,12 @@ import { Input, Col, Container, Row, Footer } from 'mdbreact';
 class FooterPage extends React.Component {
     render(){
         return(
-          <div style={{paddingTop:'20px', paddingBottom:'10px'}}>
+          <div style={{paddingTop:'20px', paddingBottom:'10px'}} >
             <hr className="style-four"/>
             <Container fluid className="text-center text-md-left">
               <Row>
                 <Col sm="4">
-                  <div className="footer-copyright text-center py-3" >
+                  <div className="footer-copyright text-center py-3" id="footer-dead">
                       <Container fluid style={{fontFamily:'Oswald'}}>
                           <small>&copy; {(new Date().getFullYear())} Copyright: <a href="https://www.richardscheiwe.com"> Richard Scheiwe</a></small>
                       </Container>
@@ -27,7 +27,7 @@ class FooterPage extends React.Component {
                   <div className="footer-copyright text-center py-3" >
                     <Container fluid style={{fontFamily:'Oswald'}}>
                       <small>
-                        <a href="/browse">  Browse  </a> 
+                        <a href="/browse">  Browse  </a>
                         <a href="/contact" style={{padding:'10px'}}> Contact  </a>
                         <a href="/about">  About  </a>
                       </small>
