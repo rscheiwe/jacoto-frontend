@@ -8,6 +8,14 @@
   overflow: hidden;
 }
 
+.head-div {
+  height: 80vh;
+  min-width: 1024px;
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+}
+
 div.blanket-div {
   position: relative;
   min-height: 520px;
