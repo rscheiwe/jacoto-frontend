@@ -34,7 +34,7 @@ class TopicCard extends React.Component {
         <span className={this.props.option}>
           <Card className={"course-card " + this.props.option} onClick={ this.toggleFetch } style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', minWidth:'200px', minHeight:'200px'}}>
 
-
+            <img src={this.props.pic} onClick={ this.toggleFetch } className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', minHeight:'150px'}}/>
 
             <Card.Content>
               <h5 style={{textAlign:'center', fontFamily:'Oswald', fontColor:'black'}}>{this.props.topic}</h5>

@@ -52,9 +52,14 @@ class AdvancedSearch extends Component {
     switch (this.state.clicked) {
       case 'topics':
         key = "topic"
-        topics = ['Data Science', 'Humanities', 'Philosophy', 'Technologies', 'Science']
+        topics = [{topic: 'Data Science', pic: require('./jacoto-data.jpg')},
+                  {topic: 'Humanities', pic: require('./jacoto-humanities.jpg')},
+                  {topic: 'Philosophy', pic: require('./jacoto-philosophy.jpg')},
+                  {topic: 'Technologies', pic: require('./jacoto-technologies.jpg')},
+                  {topic: 'Science', pic: require('./jacoto-science.png')}]
         return topicList = topics.map(topic => {
-          return <TopicCard topic={topic} handleCourseFetch={ this.handleCourseFetch } option={key} />
+          // debugger
+          return <TopicCard topic={topic['topic']} pic={topic['pic']} handleCourseFetch={ this.handleCourseFetch } option={key} />
         })
 
       case 'price':
@@ -120,19 +125,18 @@ class AdvancedSearch extends Component {
           </Container>
 
           <div className="container-row">
-            <h2 className='mirror'></h2>
-            <hr />
+
             <Container className="mt-5">
               <ItemsCarousel
-                numberOfCards={3}
-                gutter={0}
+                numberOfCards={3.5}
+                gutter={3}
                 showSlither={true}
                 firstAndLastGutter={true}
                 freeScrolling={false}
                 requestToChangeActive={this.changeActiveItem}
                 activeItemIndex={activeItemIndex}
                 activePosition={'center'}
-                chevronWidth={24}
+                chevronWidth={36}
                 rightChevron={'>'}
                 leftChevron={'<'}
                 outsideChevron={true}

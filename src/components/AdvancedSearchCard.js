@@ -10,7 +10,7 @@ const AdvancedSearchCard = (props) => {
 
   return (
     <span className="search-button" onClick={handleClick} id={`${props.option}-search-font`}>
-
+    
       <button className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" id='corners'>
         {/*<h5>{props.option.toUpperCase()}</h5><i className="fa fa-sign-in ml-2"></i>*/}
       {/*  <div onClick={handleClick} id={`${props.option}-search`} >
