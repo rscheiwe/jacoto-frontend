@@ -94,7 +94,7 @@ class CourseCard extends Component {
         <span className="overlay">
           <span className="text">
 
-            <img src={require({image})} style={{width:'250px'}} alt="provideroxxs1"/>
+            <img src={require(`${image}`)} style={{width:'250px'}} alt="provideroxxs1"/>
           </span>
         </span>
         </Link>

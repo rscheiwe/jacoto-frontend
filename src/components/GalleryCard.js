@@ -52,7 +52,7 @@ class GalleryCard extends React.Component {
           <div className="overlay">
             <div className="text">
 
-              <img src={require({image})} alt="provider00d2" style={{width:'250px'}}/>
+              <img src={require(`${image}`)} alt="provider00d2" style={{width:'250px'}}/>
             </div>
           </div>
           </Link>
