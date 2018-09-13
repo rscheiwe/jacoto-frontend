@@ -75,7 +75,7 @@ class CourseCard extends Component {
 
           <Link to={`/courses/${this.props.course.id}`}><h5 style={{textAlign:'center', fontFamily:'Oswald', fontColor:'black'}}>{this.props.course.attributes.title}</h5></Link>
         <Card.Meta style={{paddingBottom:"20px"}}>
-          <span className='provider' style={{padding:'10px', color:'gray'}}><small>Via <i>Udactiy</i></small></span>
+          <span className='provider' style={{padding:'10px', color:'gray'}}><small>Via <i>{this.props.course.attributes.provider}</i></small></span>
         </Card.Meta>
         </Card.Content>
 
