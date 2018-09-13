@@ -44,7 +44,7 @@ class GalleryCard extends React.Component {
 
             <center><Link to={`/courses/${this.props.course.id}`}><h5 style={{textAlign:'center', padding:'3px', fontSize:'1.5vw', fontFamily:'Oswald'}}>{this.props.course.attributes.title}</h5></Link></center>
             <Card.Meta style={{paddingBottom:"20px"}}>
-              <span className='provider' style={{padding:'10px', color:'gray', fontSize:'1.25vw'}}><small>Via <i>Udactiy</i></small></span>
+              <span className='provider' style={{padding:'10px', color:'gray', fontSize:'1.25vw'}}><small>Via <i>{this.props.course.attributes.provider}</i></small></span>
             </Card.Meta>
           </Card.Content>
 
@@ -52,7 +52,7 @@ class GalleryCard extends React.Component {
           <div className="overlay">
             <div className="text">
 
-              <img src={require(`${image}`)} alt="provider00d2" style={{width:'250px'}}/>
+              <img src={require(`${image}`)} alt="provider00d2" style={{maxWidth:'250px'}}/>
             </div>
           </div>
           </Link>
