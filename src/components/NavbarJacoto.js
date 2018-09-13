@@ -35,7 +35,7 @@ render() {
         <div>
 
             <Navbar className="navbar fixed-top navbar-expand-md navbar-transparent double-nav scrolling-navbar transparent">
-            { !this.state.isWideEnough && <NavbarToggler onClick={this.clicked } />}
+          {/*  { !this.state.isWideEnough && <NavbarToggler onClick={this.clicked } />} */}
 
             <a href='/'><div className="hoja-nav">
                 <NavbarBrand href="/">
@@ -89,25 +89,32 @@ render() {
               </span>
             </div>
           */}
-            <ul className="nav navbar-nav nav-flex-icons ml-auto">
+  {/*          <ul className="nav navbar-nav nav-flex-icons ml-auto">
               <li className="nav-item">
                 <a href="/contact" data-toggle="modal" data-target="#contactForm" className="nav-link waves-effect">
                   <Icon link name='envelope outline' /><span className="sr-only">Contact us</span>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           {
             this.props.loggedIn === false ?
-            <div>
-              <a id="navbar-category-pro-react" className="login-modal-form" role="button">
-                <span className="d-none d-lg-inline-block mr-1"><LoginForm /></span>
-              </a>
-              <a id="navbar-category-pro-react" className="login-modal-form" role="button">
-                <span className="d-none d-lg-inline-block mr-1"><SignUpForm /></span>
-              </a>
-            </div>
+            <ul className="nav navbar-nav nav-flex-icons ml-auto">
+              <li className="nav-item">
+                <a id="navbar-category-pro-react" className="login-modal-form" role="button">
+                  <span className="d-lg-inline-block mr-1"><LoginForm /></span>
+                  {/*<span className="d-none d-lg-inline-block mr-1"><LoginForm /></span>*/}
+                </a>
+              </li>
+              <li className="nav-item">
+                <a id="navbar-category-pro-react" className="login-modal-form" role="button">
+                  <span className="d-lg-inline-block mr-1"><SignUpForm /></span>
+                </a>
+              </li>
+            </ul>
             :
-            <div>
+            <NavbarNav right>
+            <ul className="nav navbar-nav nav-flex-icons ml-auto">
+              <li className="nav-item">
             <a href="/profile" id="navbar-category-pro-react" className="profile-trigger" role="button">
               <span className="d-none d-lg-inline-block mr-1">
                 <span id="navbar-category-gettingstarted-react"
@@ -116,7 +123,8 @@ render() {
                 </span>
               </span>
             </a>
-
+            </li>
+            <li className="nav-item">
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
               <span className="d-none d-lg-inline-block mr-1">
                 <span id="navbar-category-gettingstarted-react"
@@ -127,7 +135,9 @@ render() {
                 </span>
               </span>
             </a>
-            </div>
+            </li>
+          </ul>
+            </NavbarNav>
           }
           </Navbar>
       </div>
