@@ -95,7 +95,8 @@ class Course extends Component {
                   fontSize:'17px',
                   marginBottom:'-17px',
                   letterSpacing:'0.4em',
-                  lineHeight:'2.3'
+                  lineHeight:'2.3',
+                  marginLeft: '150px'
                 }}>{!this.props.course ?
                     null
                     :
