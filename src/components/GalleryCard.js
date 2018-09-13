@@ -5,7 +5,8 @@ import { Card, Icon } from 'semantic-ui-react'
 class GalleryCard extends React.Component {
 
   state = {
-    clicked: false
+    clicked: false,
+    image: './Udacity_logo.png'
   }
 
   handleClick = () => {
@@ -14,7 +15,24 @@ class GalleryCard extends React.Component {
     })
   }
 
+
+
+
   render() {
+    switch (this.props.course.provider) {
+      case: 'MIT':
+        return this.setState({
+          image: './MIT.png'
+        })
+      case: 'Udacity':
+        return this.setState({
+          image: './Udacity_logo.png'
+        })
+      default:
+        return this.setState({
+          image: './FutureLearn.png'
+        })
+    }
     return (
         <Card id={this.props.course.id} className="gallery-card"
           style={{
@@ -26,18 +44,20 @@ class GalleryCard extends React.Component {
 
           <Card.Content>
 
-            <center><h5 style={{textAlign:'center', padding:'3px', fontSize:'1.5vw', fontFamily:'Oswald'}}>{this.props.course.attributes.title}</h5></center>
+            <center><Link to={`/courses/${this.props.course.id}`}><h5 style={{textAlign:'center', padding:'3px', fontSize:'1.5vw', fontFamily:'Oswald'}}>{this.props.course.attributes.title}</h5></Link></center>
             <Card.Meta style={{paddingBottom:"20px"}}>
               <span className='provider' style={{padding:'10px', color:'gray', fontSize:'1.25vw'}}><small>Via <i>Udactiy</i></small></span>
             </Card.Meta>
           </Card.Content>
 
+          <Link to={`/courses/${this.props.course.id}`}>
           <div className="overlay">
             <div className="text">
 
-              <img src={require('./Udacity_logo.png')} alt="provider00d2" style={{width:'250px'}}/>
+              <img src={require({this.state.image})} alt="provider00d2" style={{width:'250px'}}/>
             </div>
           </div>
+          </Link>
 
           <Card.Content extra  style={{position:"absolute", bottom:'10px', paddingTop:'15px'}} >
 
