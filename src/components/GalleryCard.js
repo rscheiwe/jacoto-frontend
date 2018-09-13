@@ -21,15 +21,19 @@ class GalleryCard extends React.Component {
 
   render() {
     let image = ''
+    let size = ''
     switch (this.props.course.attributes.provider) {
       case 'MIT':
         image = './MIT.png'
+        size = '100px';
         break;
       case 'Udacity':
         image= './Udacity_logo.png'
+        size = '250px'
         break;
       default:
         image = './FutureLearn.png'
+        size = '100px';
     }
     return (
         <Card id={this.props.course.id} className="gallery-card"
@@ -38,7 +42,7 @@ class GalleryCard extends React.Component {
             borderBottomRightRadius:'25px',
           }}>
 
-          {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy003id"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', maxHeight:'250px'}}/>}
+          {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy003id"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', maxHeight:200px'}}/>}
 
           <Card.Content>
 
@@ -52,7 +56,7 @@ class GalleryCard extends React.Component {
           <div className="overlay">
             <div className="text">
 
-              <img src={require(`${image}`)} alt="provider00d2" style={{maxWidth:'250px'}}/>
+              <img src={require(`${image}`)} alt="provider00d2" style={{maxWidth:`${size}`}}/>
             </div>
           </div>
           </Link>
