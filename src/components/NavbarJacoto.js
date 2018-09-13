@@ -116,7 +116,7 @@ render() {
             <ul className="nav navbar-nav nav-flex-icons ml-auto">
               <li className="nav-item">
             <a href="/profile" id="navbar-category-pro-react" className="profile-trigger" role="button">
-              <span className="d-none d-lg-inline-block mr-1">
+              <span className="d-lg-inline-block mr-1">
                 <span id="navbar-category-gettingstarted-react"
                       className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light"
                       role="button">Profile<i className="fa fa-user ml-2"></i>
@@ -126,7 +126,7 @@ render() {
             </li>
             <li className="nav-item">
             <a id="navbar-category-pro-react" className="login-modal-form" role="button">
-              <span className="d-none d-lg-inline-block mr-1">
+              <span className="d-lg-inline-block mr-1">
                 <span id="navbar-category-gettingstarted-react"
                       onClick={this.toggle}
                       className="btn btn-outline-unique btn-sm my-0 ml-3 waves-effect waves-light"
