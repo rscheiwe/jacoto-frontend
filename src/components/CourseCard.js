@@ -52,15 +52,19 @@ class CourseCard extends Component {
 
   render() {
     let image = ''
+    let size = ''
     switch (this.props.course.attributes.provider) {
       case 'MIT':
-        image = './MIT.png'
+        image = './MIT.png';
+        size = '100px';
         break;
       case 'Udacity':
         image= './Udacity_logo.png'
+        size = '250px'
         break;
       default:
-        image = './FutureLearn.png'
+        image = './FutureLearn.png';
+        size = '100px';
     }
     // console.log(this.state.added_course)
     return (
@@ -94,7 +98,7 @@ class CourseCard extends Component {
         <span className="overlay">
           <span className="text">
 
-            <img src={require(`${image}`)} style={{maxWidth:'250px'}} alt="provideroxxs1"/>
+            <img src={require(`${image}`)} style={{width:`${size}`}} alt="provideroxxs1"/>
           </span>
         </span>
         </Link>
