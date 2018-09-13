@@ -42,7 +42,7 @@ class GalleryCard extends React.Component {
             borderBottomRightRadius:'25px',
           }}>
 
-          {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy003id"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', maxHeight:200px'}}/>}
+          {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy003id"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', maxHeight:'200px'}}/>}
 
           <Card.Content>
 
@@ -53,12 +53,12 @@ class GalleryCard extends React.Component {
           </Card.Content>
 
           <Link to={`/courses/${this.props.course.id}`}>
-          <div className="overlay">
-            <div className="text">
+          <span className="overlay">
+            <span className="text">
 
-              <img src={require(`${image}`)} alt="provider00d2" style={{maxWidth:`${size}`}}/>
-            </div>
-          </div>
+              <img src={require(`${image}`)} alt="provider00d2" style={{width:`${size}`}}/>
+            </span>
+          </span>
           </Link>
 
           <Card.Content extra  style={{position:"absolute", bottom:'10px', paddingTop:'15px'}} >
