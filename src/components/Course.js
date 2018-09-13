@@ -69,9 +69,7 @@ class Course extends Component {
                   letterSpacing:'0.2em',
                   fontFamily:'Oswald',
                   marginLeft:'15px'
-                }}>{!this.props.course ?
-                    null
-                    :
+                }}>{
                     this.props.course.attributes.title
                   }
                 </span>
