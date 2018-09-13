@@ -63,7 +63,7 @@ class CourseCard extends Component {
           <Link to={`/courses/${this.props.course.id}`}><img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy0xcic1"/></Link>
           :
 
-          <Link to={`/courses/${this.props.course.id}`}><img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" alt="course0xcic1" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', maxHeight:'100px'}} /></Link>
+          <Link to={`/courses/${this.props.course.id}`}><img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" alt="course0xcic1" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', maxHeight:'200px'}} /></Link>
 
         }
 
