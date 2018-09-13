@@ -51,6 +51,17 @@ class CourseCard extends Component {
   }
 
   render() {
+    let image = ''
+    switch (this.props.course.attributes.provider) {
+      case 'MIT':
+        image = './MIT.png'
+        break;
+      case 'Udacity':
+        image= './Udacity_logo.png'
+        break;
+      default:
+        image = './FutureLearn.png'
+    }
     // console.log(this.state.added_course)
     return (
       // <div className="d-flex flex-wrap">
@@ -83,7 +94,7 @@ class CourseCard extends Component {
         <span className="overlay">
           <span className="text">
 
-            <img src={require('./Udacity_logo.png')} style={{width:'250px'}} alt="provideroxxs1"/>
+            <img src={require({image})} style={{width:'250px'}} alt="provideroxxs1"/>
           </span>
         </span>
         </Link>
