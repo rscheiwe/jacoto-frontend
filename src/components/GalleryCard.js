@@ -22,7 +22,7 @@ class GalleryCard extends React.Component {
             borderBottomRightRadius:'25px',
           }}>
 
-          {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy003id"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}}/>}
+          {!this.props.course.attributes.image ? <img src={"https://mdbootstrap.com/img/Photos/Others/images/43.jpg"} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px'}} alt="dummy003id"/> : <img src={this.props.course.attributes.image} alt={this.props.course.id} className="img-fluid" style={{borderTopLeftRadius:'25px', borderBottomRightRadius:'25px', maxHeight:'250px'}}/>}
 
           <Card.Content>
 
@@ -34,7 +34,7 @@ class GalleryCard extends React.Component {
 
           <div className="overlay">
             <div className="text">
-              
+
               <img src={require('./Udacity_logo.png')} alt="provider00d2" style={{width:'250px'}}/>
             </div>
           </div>
