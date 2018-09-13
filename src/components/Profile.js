@@ -25,7 +25,8 @@ class Profile extends React.Component {
       <Container>
         <Grid columns={2} stackable>
          <Grid.Column>
-           <Segment><center><img src={this.props.user.avatar} className="responsive" alt="profile"/></center></Segment>
+           <Segment><center><img src='https://blueoakschurch.org/wp-content/uploads/2014/11/person-placeholder-male.jpg' className="responsive" alt="profile"/></center></Segment>
+           {/*<Segment><center><img src={this.props.user.avatar} className="responsive" alt="profile"/></center></Segment>*/}
          </Grid.Column>
          <Grid.Column>
            <Segment>CONTENT</Segment>
