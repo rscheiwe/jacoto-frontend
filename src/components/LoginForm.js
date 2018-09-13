@@ -43,7 +43,7 @@ class LoginForm extends React.Component {
         </span>
           <Form>
             <Modal isOpen={this.state.modal} toggle={this.toggle} centered>
-              <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+              <ModalHeader toggle={this.toggle}>Please Login</ModalHeader>
                 <ModalBody>
                 <form >
                   <Input label="Your Email" icon="envelope" onChange={this.handleChange} />

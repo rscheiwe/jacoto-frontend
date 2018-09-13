@@ -49,7 +49,7 @@ class SignUpForm extends React.Component {
           {/*<Button className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" onClick={this.toggle}>Login<i className="fa fa-sign-in ml-2"></i></Button>*/}
           <Form>
             <Modal isOpen={this.state.modal} toggle={this.toggle} centered>
-              <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+              <ModalHeader toggle={this.toggle}>Sign-up with Jacoto</ModalHeader>
                 <ModalBody>
                   <Input label="Your Email" icon="envelope" onChange={this.handleChange}/>
                   <Input label="Type your password" icon="lock" onChange={this.handlePass}/>
