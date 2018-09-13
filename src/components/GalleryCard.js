@@ -20,7 +20,7 @@ class GalleryCard extends React.Component {
 
   render() {
     let image = ''
-    switch (this.props.course.provider) {
+    switch (this.props.course.attributes.provider) {
       case: 'MIT':
         image = './MIT.png'
       case: 'Udacity':
