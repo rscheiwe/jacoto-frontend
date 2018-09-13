@@ -19,19 +19,14 @@ class GalleryCard extends React.Component {
 
 
   render() {
+    let image = ''
     switch (this.props.course.provider) {
       case: 'MIT':
-        return this.setState({
-          image: './MIT.png'
-        })
+        image = './MIT.png'
       case: 'Udacity':
-        return this.setState({
-          image: './Udacity_logo.png'
-        })
+        image = './Udacity_logo.png'
       default:
-        return this.setState({
-          image: './FutureLearn.png'
-        })
+        image = './FutureLearn.png'
     }
     return (
         <Card id={this.props.course.id} className="gallery-card"
@@ -54,7 +49,7 @@ class GalleryCard extends React.Component {
           <div className="overlay">
             <div className="text">
 
-              <img src={require({this.state.image})} alt="provider00d2" style={{width:'250px'}}/>
+              <img src={require({image})} alt="provider00d2" style={{width:'250px'}}/>
             </div>
           </div>
           </Link>
