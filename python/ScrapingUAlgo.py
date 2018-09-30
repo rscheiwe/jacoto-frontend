@@ -27,8 +27,16 @@ profile.set_preference("browser.cache.disk.enable", False)
 profile.set_preference("browser.cache.memory.enable", False)
 profile.set_preference("browser.cache.offline.enable", False)
 profile.set_preference("network.http.use-cache", False)
-profile.update_preferences()
-binary = FirefoxBinary('C:\\Program Files\\Mozilla Firefox\\firefox.exe')
+profile.set_preference("places.history.enabled", False)
+profile.set_preference("privacy.clearOnShutdown.offlineApps", True)
+profile.set_preference("privacy.clearOnShutdown.passwords", True)
+profile.set_preference("privacy.clearOnShutdown.siteSettings", True)
+profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
+my_proxy = Proxy({'proxyType': ProxyType.MANUAL,
+                  'httpProxy': random.choice(['121.129.127.209:80', '124.41.215.238:45169', '185.93.3.123:8080', '194.182.64.67:3128', '106.0.38.174:8080', '163.172.175.210:3128', '13.92.196.150:8080']),
+                  'sslProxy': random.choice(['121.129.127.209:80', '124.41.215.238:45169', '185.93.3.123:8080', '194.182.64.67:3128', '106.0.38.174:8080', '163.172.175.210:3128', '13.92.196.150:8080']),
+                  'noProxy': 'www.google-analytics.com, ajax.googleapis.com, apis.google.com'
+                 })
 
 driver = webdriver.Firefox(firefox_profile=profile, firefox_binary=binary, executable_path='/Python3/Scripts/geckodriver.exe')
 driver.get("https://www.udemy.com/topic/python/?p=1")
@@ -67,22 +75,6 @@ for i in range(1,5):
         pass
 #         print("Skipping. Connnection error")
 
-profile = webdriver.FirefoxProfile()
-profile.set_preference("general.useragent.override", UserAgent().random)
-profile.set_preference("browser.cache.disk.enable", False)
-profile.set_preference("browser.cache.memory.enable", False)
-profile.set_preference("browser.cache.offline.enable", False)
-profile.set_preference("network.http.use-cache", False)
-profile.set_preference("places.history.enabled", False)
-profile.set_preference("privacy.clearOnShutdown.offlineApps", True)
-profile.set_preference("privacy.clearOnShutdown.passwords", True)
-profile.set_preference("privacy.clearOnShutdown.siteSettings", True)
-profile.set_preference("privacy.sanitize.sanitizeOnShutdown", True)
-my_proxy = Proxy({'proxyType': ProxyType.MANUAL,
-                  'httpProxy': random.choice(['121.129.127.209:80', '124.41.215.238:45169', '185.93.3.123:8080', '194.182.64.67:3128', '106.0.38.174:8080', '163.172.175.210:3128', '13.92.196.150:8080']),
-                  'sslProxy': random.choice(['121.129.127.209:80', '124.41.215.238:45169', '185.93.3.123:8080', '194.182.64.67:3128', '106.0.38.174:8080', '163.172.175.210:3128', '13.92.196.150:8080']),
-                  'noProxy': 'www.google-analytics.com, ajax.googleapis.com, apis.google.com'
-                 })
 
 PROXY = random.sample(proxies, 1)
 new_prox = ''
