@@ -21,7 +21,7 @@ const Header = () => {
                     <img src='/images/jacoto_logo.png' alt="" width="400px"/>
                   </span>
               </h1>
-              <p className='mirror-div'><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>
+              <p className='mirror-div'><b>Over 20K online-courses, at your fingertips. Sign-up to save course lists, or simply browse to see our selection. </b>
               </p>
             </div>
           </div>

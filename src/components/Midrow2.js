@@ -41,10 +41,11 @@ const Midrow2 = () => {
               }}><b>Learn Anywhere</b></span>
             </h1>
             <p style={{
-              fontSize: '12px',
+              fontSize: '14px',
               letterSpacing: '0.4em',
-              lineHeight: '2.4'
-            }}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>
+              lineHeight: '2.4',
+              padding:'2em'
+            }}><b>With our course selection, you don't have to jump around between multiple websites. We'll feed you all those sites' courses, and you can save them here for later viewing.</b>
             </p>
           </div>
 

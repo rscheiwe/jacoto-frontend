@@ -39,7 +39,8 @@ class Course extends Component {
         <div style={{
           height: '100%',
           minHeight: '520px',
-          position: 'relative'
+          position: 'relative',
+          // padding:'1em'
         }}>
           <div style={{
             height: '100%',
@@ -58,7 +59,7 @@ class Course extends Component {
                 marginTop:'0px',
                 marginRight:'80px',
                 marginBottom:'-20px',
-                marginLeft:'-68px',
+                marginLeft:'-18px',
                 display:'flex',
                 alignItems:'center',
                 flexDirection:'row-reverse'
@@ -100,7 +101,9 @@ class Course extends Component {
                 }}>{!this.props.course ?
                     null
                     :
-                    this.props.course.attributes.slug
+                    <a href={this.props.course.attributes.slug} target="_blank" >
+                    Course Homepage
+                    </a>
                   }
 
                 </p>
