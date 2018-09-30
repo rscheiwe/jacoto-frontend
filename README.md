@@ -1,6 +1,6 @@
 # Jacoto
 
-[Jacoto](http://jacoto.herokuapp.com) is an online-course search engine and syllabus creator, featuring over 20K courses. Currently, a personalized recommendation engine utilizing Python and NumPy is underway to streamline UX.
+[Jacoto](http://jacoto.herokuapp.com) is an online-course search engine and syllabus creator, featuring over 20K courses. Currently, a personalized recommendation engine utilizing Python and NumPy is underway to streamline UX, and the site as a whole is being made responsive for PWA purposes and mobile development.
 
 The API may be found [here](https://github.com/rscheiwe/jacoto-api) as a Rails API.
 
@@ -30,4 +30,15 @@ The project is not holistically dependent on Pico, however, since the [Python sc
 
 If gathering original data, please review the seeding process in the `seeds.rb` file in the [backend](https://github.com/rscheiwe/jacoto-api/blob/master/db/seeds.rb).
 
-### Python
+## Built With
+
+* [Pico](https://github.com/fergalwalsh/pico) - HTTP API for Python
+* [Selenium](https://github.com/SeleniumHQ/selenium) - Web Browser Automation
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/rscheiwe/jacoto-frontend/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
