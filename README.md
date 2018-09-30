@@ -22,7 +22,7 @@ npm install
 
 Live Python functionality is dependent on [Pico](https://github.com/fergalwalsh/pico) ([docs](https://pico.readthedocs.io/en/latest/)), which provides Javascript the ability to engage and implement Python programs through a minimalist API. It is recommended that Pico is installed via pip:
 
-```python
+```
 pip install --upgrade pico
 ```
 
