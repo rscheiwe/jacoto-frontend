@@ -19,6 +19,7 @@ body{
 
 .back {
   background:rgb(255,255,244);
+  padding: 20%;
 }
 
 .top-nav-collapse {
@@ -481,4 +482,18 @@ hr.style-four {
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
   width:auto;
   opacity:0.2;
+}
+
+.dead-row {
+  padding:5em;
+  font-family:Oswald;
+  letter-spacing: 3px;
+}
+
+.about-img {
+  width:250%;
+  /* max-height:90%; */
+  background-size:cover;
+  background-positionX: 50%;
+  background-positionY: 50%;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem } from 'mdbreact';
-import { Link } from 'react-router-dom'
-import { Icon, Button } from 'semantic-ui-react'
+import { Navbar, NavbarBrand, NavbarNav, Collapse } from 'mdbreact';
+// import { Link } from 'react-router-dom'
+// import { Button } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import LoginForm from './LoginForm.js'
 import SignUpForm from './SignUpForm.js'
@@ -35,7 +35,6 @@ render() {
         <div>
 
             <Navbar className="navbar fixed-top navbar-expand-md navbar-transparent double-nav scrolling-navbar transparent">
-          {/*  { !this.state.isWideEnough && <NavbarToggler onClick={this.clicked } />} */}
 
             <a href='/'><div className="hoja-nav">
                 <NavbarBrand href="/">

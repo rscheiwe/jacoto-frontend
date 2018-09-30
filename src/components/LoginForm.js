@@ -1,6 +1,6 @@
 import React from 'react';
 import { Input, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
-import { Form, Button } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 import { loginUser } from '../actions/actions.js'

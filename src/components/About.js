@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import { Input } from 'mdbreact'
-import { Link } from 'react-router-dom'
+
 
 class About extends Component {
 
@@ -38,13 +37,8 @@ class About extends Component {
             right:'18px',
             // zIndex:'0',
           }}>
-              <img src='/images/jacoto_about.jpg'
-                style={{
-                  width:"350%",
-                  backgroundSize:'cover',
-                  backgroundPositionX: "50%",
-                  backgroundPositionY: "50%"
-                }} alt="background"
+              <img className="about-img" src='/images/jacoto_about.jpg'
+                 alt="background"
               />
           </div>
 
@@ -64,16 +58,16 @@ class About extends Component {
                   letterSpacing:'.055em',
                   fontFamily: 'Oswald'
                 }}>
-                  <b>About </b><img src='/images/jacoto_logo.png' style={{maxWidth:'400px'}}/>
+                  <b>About </b><img src='/images/jacoto_logo.png' style={{maxWidth:'400px'}} alt="logo"/>
 
                 </span>
 
               </h1>
               <p style={{
-                fontSize: '12px',
+                fontSize: '14px',
                 letterSpacing: '0.4em',
                 lineHeight: '2.4'
-              }}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>
+              }}>
               </p>
 
             </div>
@@ -83,7 +77,10 @@ class About extends Component {
       <div>
 
       </div>
-      <div id="dead-row" />
+      <div className="dead-row" >
+      Jacoto is inspired by the freedom to learn. Named after the 18th-century French philosopher of education,
+      Joseph Jacoto, our mission is to provide access to learning through online courses.
+      </div>
       </div>
     )
   }

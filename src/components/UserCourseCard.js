@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Adapter from '../Adapter.js'
-import { Card, Icon, Dimmer, Popup } from 'semantic-ui-react'
+import { Card, Icon, Dimmer } from 'semantic-ui-react'
 import { Col } from 'mdbreact';
 import { removeCourseFromUser } from '../actions/actions.js'
 
@@ -51,12 +51,12 @@ class CourseCard extends Component {
 
   render() {
 
-    const style = {
-      borderRadius: 0,
-      opacity: 0.8,
-      padding: '2em',
-    }
-        // console.log(this.state.added_course)
+    // const style = {
+    //   borderRadius: 0,
+    //   opacity: 0.8,
+    //   padding: '2em',
+    // }
+      
     return (
       // <div className="d-flex flex-wrap">
       <Col md="4" style={{padding:'15px'}}>

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Input, Col, Container, Row, Footer } from 'mdbreact';
+import { Col, Container, Row } from 'mdbreact';
 
 class FooterPage extends React.Component {
     render(){
         return(
-          <div style={{paddingTop:'20px', paddingBottom:'10px'}} >
+          <div style={{paddingTop:'20px', paddingBottom:'10px', background:'rgb(255,255,244)'}} >
             <hr className="style-four"/>
             <Container fluid className="text-center text-md-left">
               <Row>
