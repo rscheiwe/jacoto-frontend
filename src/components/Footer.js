@@ -42,30 +42,3 @@ class FooterPage extends React.Component {
 }
 
 export default FooterPage;
-//
-// <Footer color="blue lighten-1" className="font-small pt-4 mt-4" id="footer-dead">
-//     <Container fluid className="text-center text-md-left">
-//         <Row>
-//         <Col sm="4">
-//             <h5 className="title" style={{fontFamily:'Oswald'}}>Footer Content</h5>
-//
-//         </Col>
-//         <Col sm="4">
-//
-//             <ul>
-//               <li className="list-unstyled"><a href="/about" style={{fontFamily:'Oswald'}}>About</a></li>
-//               <li className="list-unstyled"><a href="/contact" style={{fontFamily:'Oswald'}}>Contact Jacoto</a></li>
-//             </ul>
-//         </Col>
-//         <Col sm="4">
-//
-//             <Input label="Sign-up for updates" icon="envelope" className="blue-grey-text" style={{fontFamily:'Oswald'}}/>
-//         </Col>
-//         </Row>
-//     </Container>
-//     <div className="footer-copyright text-center py-3">
-//         <Container fluid style={{fontFamily:'Oswald'}}>
-//             &copy; {(new Date().getFullYear())} Copyright: <a href="https://www.richardscheiwe.com"> Richard Scheiwe</a>
-//         </Container>
-//     </div>
-// </Footer>
