@@ -10,9 +10,8 @@ import { logoutUser } from '../actions/actions.js'
 
 class NavBar extends Component {
   state = {
-    collapse: false,
-    isWideEnough: false,
-    refresh: false
+    collapse: false
+
   };
 
   clicked = () => {
@@ -32,7 +31,7 @@ class NavBar extends Component {
 render() {
   // console.log(this.props)
     return (
-        <div>
+        <div className='navigation'>
 
             <Navbar className="navbar fixed-top navbar-expand-md navbar-transparent double-nav scrolling-navbar transparent">
 
@@ -48,10 +47,10 @@ render() {
               </div>
                 <Collapse isOpen = { this.state.collapse } >
 
-                  <NavbarNav left>
+
 
                     <a href="/browse" id="navbar-category-pro-react" className="profile-trigger" role="button">
-                      <span className="d-none d-lg-inline-block mr-1">
+                      <span >
                           <span id="navbar-category-gettingstarted-react"
                                 className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light"
                                 role="button">Browse<i className="fa fa-search ml-2"></i>
@@ -59,7 +58,8 @@ render() {
                       </span>
                     </a>
                     <a href="/about" id="navbar-category-pro-react" className="profile-trigger" role="button">
-                      <span className="d-none d-lg-inline-block mr-1">
+                      <span >
+                      {/*<span className="d-none d-lg-inline-block mr-1">*/}
                           <span id="navbar-category-gettingstarted-react"
                                 className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light"
                                 role="button">About<i className="fa fa-info ml-2"></i>
@@ -68,33 +68,10 @@ render() {
                     </a>
 
 
-                  </NavbarNav>
+
 
               </Collapse>
-{/*
-              <div className="mr-auto">
-                <span className="d-none d-md-inline-block">
 
-                <a id="navbar-category-gettingstarted-react" className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" href="/" role="button">
-                  <span className="d-none d-lg-inline-block mr-1"></span>
-                  <i className="fa fa-download"></i>
-                </a>
-                <a id="navbar-category-pro-react" className="btn btn-unique btn-sm my-0 waves-effect waves-light" href="/" role="button">
-                  <span className="d-none d-lg-inline-block mr-1"></span>
-                  <i className="fa fa-diamond"></i>
-              </a>
-
-                <span id="dynamicContentWrapper-mainNavbar2"></span>
-              </span>
-            </div>
-          */}
-  {/*          <ul className="nav navbar-nav nav-flex-icons ml-auto">
-              <li className="nav-item">
-                <a href="/contact" data-toggle="modal" data-target="#contactForm" className="nav-link waves-effect">
-                  <Icon link name='envelope outline' /><span className="sr-only">Contact us</span>
-                </a>
-              </li>
-            </ul> */}
           {
             this.props.loggedIn === false ?
             <ul className="nav navbar-nav nav-flex-icons ml-auto">

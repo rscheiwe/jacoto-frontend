@@ -2,6 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,600');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
+@media only screen and (max-width: 768px) {
+  /* .navigation {
+      visibility: hidden;
+  } */
+
+  .navbar {
+      width: 100%;
+      height: 10%;
+  }
+
+}
+
 html,
 body{
   height: 100%;
@@ -36,12 +48,7 @@ body{
 
 
 
-@media only screen and (max-width: 768px) {
-  .navbar {
-      width: 100%;
-      height: 10%;
-  }
-}
+
 
 .responsive {
   width:100%;
