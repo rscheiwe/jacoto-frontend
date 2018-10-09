@@ -4,6 +4,8 @@ import GalleryCard from './GalleryCard.js'
 // connect, mapStateToProps
 import { Container } from 'mdbreact';
 import { connect } from 'react-redux'
+import '../Browse.css'
+
 
 class Gallery2 extends React.Component {
 
@@ -43,7 +45,7 @@ class Gallery2 extends React.Component {
         <Container className="mt-5">
         <h2 style={{fontFamily:'Oswald', letterSpacing:'.5em', textAlign:'right'}}>Featured Courses</h2>
         <hr />
-        <ItemsCarousel
+        <ItemsCarousel className="carousel"
 
           numberOfCards={3.5}
           gutter={2}
@@ -61,6 +63,7 @@ class Gallery2 extends React.Component {
             flexDirection: 'row',
             flexWrap: 'wrap',
             justifyContent: 'center'
+
           }}
           className="flex-container"
         >

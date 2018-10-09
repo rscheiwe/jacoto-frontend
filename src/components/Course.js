@@ -2,13 +2,10 @@ import React, { Component } from 'react'
 import Adapter from '../Adapter.js'
 import { passCourse } from '../actions/actions'
 import  { connect } from  'react-redux'
-
+import "../Browse.css"
 
 class Course extends Component {
 
-  // state = {
-  //   course: null
-  // }
 
   componentDidMount() {
     const id = this.props.match.params.id
@@ -18,52 +15,14 @@ class Course extends Component {
       })
   }
 
-  // passCourse = (data) => {
-  //   this.setState({
-  //     course: data
-  //   })
-  // }
 
   render() {
-    // console.log(this.state.course)
     return(
-      <div style={{
-        height: '100vh',
-        minWidth: '1024px',
-        minHeight: '520px',
-        position: 'relative',
-        overflow: 'hidden',
-        bacgroundRepeat:'no-repeat',
-        backgroundColor: 'rgb(255,255,244)'
-      }}>
-        <div style={{
-          height: '100%',
-          minHeight: '520px',
-          position: 'relative',
-          // padding:'1em'
-        }}>
-          <div style={{
-            height: '100%',
-            paddingLeft: '79px'
-          }}>
-            <div style={{
-              height:'48%',
-              paddingTop:'1%',
-              position:'relative',
-              zIndex:'1',
-              display:'flex',
-              justifyContent:'center',
-              alignItems:'center'
-            }}>
-              <h1 style={{
-                marginTop:'0px',
-                marginRight:'80px',
-                marginBottom:'-20px',
-                marginLeft:'-18px',
-                display:'flex',
-                alignItems:'center',
-                flexDirection:'row-reverse'
-              }}>
+      <div className="course-main">
+        <div className="course-sub">
+          <div className="course-next">
+            <div className="course-mirror">
+              <h1 className="course-title">
 
                 <span style={{
                   fontSize:'105px',

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card, Icon } from 'semantic-ui-react'
+import '../Browse.css'
+
 // import { Col, CardImage, CardTitle, CardText } from 'mdbreact';
 
 class GalleryCard extends React.Component {
