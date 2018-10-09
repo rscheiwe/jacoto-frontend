@@ -30,6 +30,16 @@
       right: 0 !important;
 
     }
+    .inverted {
+      background:#00BFFF !important;
+    }
+
+    .btn-outline {
+      width:90%;
+      right:15%;
+      padding:10px !important;
+    }
+
 
   }
 
@@ -97,6 +107,8 @@ body{
 .sideNavigator {
   visibility:hidden;
 }
+
+
 
 /* .toc {
     width: 200px;

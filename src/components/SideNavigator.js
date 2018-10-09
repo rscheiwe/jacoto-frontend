@@ -32,20 +32,41 @@ export default class SideNavigator extends Component {
                     <div className='toc'>
                         <Menu className='inverted vertical left fixed'>
                             <Menu.Item>
-                                Home
-                                <Icon name='dashboard' />
-                                <Menu.Menu>
-                                    <Menu.Item name='search' active={activeItem === 'search'} onClick={this.handleItemClick}>
-                                        Search
+
+                            <a href='/'><div className="hoja-nav">
+                                <NavbarBrand href="/">
+                                <img src='/images/jacoto_logo.png' width="90px" style={{marginLeft:'-10px'}} alt="logo"/>
+
+                                </NavbarBrand>
+                              </div></a>
+
+                                </Menu.Item>
+                                    <Menu.Item className='search-button' name='search' active={activeItem === 'search'} onClick={this.handleItemClick}>
+                                    <a href="/browse" id="navbar-category-pro-react" className="profile-trigger" role="button">
+                                      <span >
+                                          <span
+                                                className="btn btn-outline btn-sm my-0 ml-3 waves-effect waves-light"
+                                                role="button">Browse<i className="fa fa-search ml-2"></i>
+                                          </span>
+                                      </span>
+                                    </a>
                                     </Menu.Item>
                                     <Menu.Item name='add' active={activeItem === 'add'} onClick={this.handleItemClick}>
-                                        Add
+                                    <a href="/about" id="navbar-category-pro-react" className="profile-trigger" role="button">
+                                      <span >
+
+                                          <span 
+                                                className="btn btn-outline btn-sm my-0 ml-3 waves-effect waves-light"
+                                                role="button">About<i className="fa fa-info ml-2"></i>
+                                          </span>
+                                      </span>
+                                    </a>
                                     </Menu.Item>
                                     <Menu.Item name='about' active={activeItem === 'about'} onClick={this.handleItemClick}>
                                         Remove
                                     </Menu.Item>
-                                </Menu.Menu>
-                            </Menu.Item>
+
+
                             <Menu.Item name='browse' active={activeItem === 'browse'} onClick={this.handleItemClick}>
                                 <Icon name='grid layout' />
                                 Browse
