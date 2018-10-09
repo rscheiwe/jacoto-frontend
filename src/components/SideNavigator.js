@@ -23,8 +23,8 @@ export default class SideNavigator extends Component {
         const { activeItem } = this.state
 
         return(
-            <div className='sideNavigator' style={{background:'rgb(255,255,244)'}}>
-              <div className="float-right" style={{padding:'35px', position: 'sticky !important'}}>
+            <div className='sideNavigator' >
+              <div className="float-right" style={{padding:'35px'}}>
                 <a onClick={this.clicked} ><i className="fa fa-bars"></i><span className="sr-only" aria-hidden="true">Toggle side navigation</span></a>
               </div>
             <Collapse isOpen = { this.state.collapse } >
@@ -63,9 +63,7 @@ export default class SideNavigator extends Component {
                             </Dropdown>
                         </Menu>
                     </div>
-                    <div className='article'>
-                        <div>Content</div>
-                    </div>
+
                 </div>
                 </Collapse>
             </div>
