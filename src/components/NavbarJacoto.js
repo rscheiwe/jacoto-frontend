@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import LoginForm from './LoginForm.js'
 import SignUpForm from './SignUpForm.js'
 import { logoutUser } from '../actions/actions.js'
+import SideNavigator from './SideNavigator.js'
 
 
 class NavBar extends Component {
@@ -31,6 +32,8 @@ class NavBar extends Component {
 render() {
   // console.log(this.props)
     return (
+      <div style={{background:'rgb(255,255,244)'}}>
+      <SideNavigator />
         <div className='navigation'>
 
             <Navbar className="navbar fixed-top navbar-expand-md navbar-transparent double-nav scrolling-navbar transparent">
@@ -46,8 +49,6 @@ render() {
                 <a onClick={this.clicked} ><i className="fa fa-bars"></i><span className="sr-only" aria-hidden="true">Toggle side navigation</span></a>
               </div>
                 <Collapse isOpen = { this.state.collapse } >
-
-
 
                     <a href="/browse" id="navbar-category-pro-react" className="profile-trigger" role="button">
                       <span >
@@ -66,9 +67,6 @@ render() {
                           </span>
                       </span>
                     </a>
-
-
-
 
               </Collapse>
 
@@ -116,6 +114,7 @@ render() {
             </NavbarNav>
           }
           </Navbar>
+      </div>
       </div>
     );
   }

@@ -29,10 +29,7 @@ class Home extends Component {
 
   render() {
     return (
-      // <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-      // <Visibility
-      //     once={false}
-      //   >
+
       <div style={{backgroundColor:'rgb(255,255,244)'}}>
         <header>
         </header>
@@ -43,8 +40,7 @@ class Home extends Component {
         <Midrow2 />
         <CourseList />
       </div>
-      // </Visibility>
-      // </Responsive>
+
     );
   }
 }
