@@ -1,46 +1,25 @@
 import React from 'react'
-// import {Container} from 'mdbreact'
-// import { Grid, Header, Image } from 'semantic-ui-react'
+import '../Browse.css'
 
 const Midrow2 = () => {
 
   return (
-    <div style={{
-      height: '100vh',
-      minWidth: '1024px',
-      minHeight: '520px',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
-      <div style={{
-        position:'relative',
-        minHeight:'520px',
-        height:'100%',
-        backgroundRepeat:'no-repeat'
-      }}
-      >
-        <div style={{
-          display:'flex',
-          flexAlign:'center',
-          alignItems:'center',
-          height:'100%'
-        }}>
-          <div style={{
-            paddingLeft:'350px',
-            zIndex:'1'
-          }}>
+    <div className="head-div">
+      <div className="blanket-div">
+        <div className="flex-div">
+          <div className="midrow-txt">
             <h1 style={{
               marginLeft:'0px'
             }}>
               <span className="lineElement">
               </span>
-              <span style={{
-                fontSize:'130px',
+              <span className="midrow-content" style={{
+                fontSize:'120px',
                 letterSpacing:'.055em',
                 fontFamily: 'Oswald'
               }}><b>Learn Anywhere</b></span>
             </h1>
-            <p style={{
+            <p className="midrow-desc" style={{
               fontSize: '14px',
               letterSpacing: '0.4em',
               lineHeight: '2.4',
