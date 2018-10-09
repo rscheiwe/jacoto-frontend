@@ -24,40 +24,25 @@ class Course extends Component {
             <div className="course-mirror">
               <h1 className="course-title">
 
-                <span style={{
-                  fontSize:'105px',
-                  letterSpacing:'0.2em',
-                  fontFamily:'Oswald',
-                  marginLeft:'15px'
-                }}>{!this.props.course ?
+                <span className="course-heading">
+                {!this.props.course ?
                     null
                     :
                     this.props.course.attributes.title
                   }
                 </span>
               </h1>
-              <div>
+              <div className="course-one">
               <span className="descriptionElement">
               </span>
-                <p style={{
-                  fontSize:'12px',
-                  letterSpacing:'0.4em',
-                  lineHeight:'2.3'
-                  // marginLeft:'20%'
-                }}>{!this.props.course ?
+                <p className="course-description">{!this.props.course ?
                     null
                     :
                     this.props.course.attributes.summary.substring(0,250)
                   }
 
                 </p>
-                <p style={{
-                  fontSize:'17px',
-                  marginBottom:'-17px',
-                  letterSpacing:'0.4em',
-                  lineHeight:'2.3',
-                  marginLeft: '150px'
-                }}>{!this.props.course ?
+                <p className="course-link">{!this.props.course ?
                     null
                     :
                     <a href={this.props.course.attributes.slug} target="_blank" >
@@ -68,11 +53,7 @@ class Course extends Component {
                 </p>
               </div>
             </div>
-            <div style={{
-              height:'52%',
-              backgroundSize:'cover',
-              backgroundRepeat:'no repeat'
-            }}>
+            <div className="course-image">
               {!this.props.course ?
                 null
                 :
