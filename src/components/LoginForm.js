@@ -38,8 +38,8 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
-        <span id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
-          LOGIN<i className="fa fa-sign-in ml-2"></i>
+        <span id="navbar-category-gettingstarted-react" onClick={this.toggle} className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" role="button">
+          <span className="mobile-screen">LOGIN</span><i className="fa fa-sign-in ml-2"></i>
         </span>
           <Form>
             <Modal isOpen={this.state.modal} toggle={this.toggle} centered>

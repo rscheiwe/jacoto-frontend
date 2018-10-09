@@ -33,11 +33,37 @@
     .inverted {
       background:#00BFFF !important;
     }
-
-    .btn-outline {
-      width:90%;
-      right:15%;
+    .btn {
+      width:90% !important;
+      right:15% !important;
       padding:10px !important;
+    }
+
+    .btn-outline-unique{
+      width:70% !important;
+      right: 1.5% !important;
+      padding:5px !important;
+    }
+
+    .btn-info {
+      display:bloack !important;
+      /* width:8em !important; */
+      margin-right:auto !important;
+      margin-left:auto !important;
+      right:0 !important;
+      /* padding: 0 !important; */
+    }
+
+    .mobile-screen {
+      color: white !important;
+    }
+
+    .fa {
+      color: white !important;
+    }
+
+    .fa-bars {
+      color: black !important;
     }
 
 
