@@ -8,7 +8,7 @@ import CourseList from './components/CourseList.js'
 import Header from './components/Header.js'
 // import Gallery from './components/Gallery.js'
 import Gallery2 from './components/Gallery2.js'
-// import MidRow from './components/MidRow.js'
+import MidRow from './components/MidRow.js'
 import Midrow2 from './components/Midrow2.js'
 import Adapter from './Adapter.js'
 // import DownloadCSV from './DownloadCSV.js'
@@ -35,6 +35,7 @@ class Home extends Component {
         </header>
 
         <Header />
+        <MidRow />
         <Gallery2 />
 
         <Midrow2 />
