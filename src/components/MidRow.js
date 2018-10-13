@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon } from 'semantic-ui-react'
 
 import '../Browse.css'
 // import { Grid } from 'semantic-ui-react'
@@ -7,12 +8,25 @@ const MidRow = () => {
 
   return (
 
-      <div className='midrow'>
 
-
-              <img src={require('./MIT.png')} width="20%" alt="" />
-              <img src={require('./Udacity_logo.png')} width="40%" alt="" />
-              <img src={require('./FutureLearn.png')} width="20%" alt="" />
+     <div className='midrow'>
+        <span className='midrow-pic'>
+          <img src={require('./MIT.png')} width="80%" alt="" />
+          </span>
+        <span className='midrow-pic'>
+          <img src={require('./Udacity_logo-fx.png')} width="70%" alt="" />
+          </span>
+        <span className='midrow-pic'>
+          <img src={require('./FutureLearn.png')} width="70%" alt="" />
+          </span>
+        <span className='midrow-pic'>
+          <img src={require('./coursera_logo.png')} width="70%" alt="" />
+          </span>
+          <span className='midrow-icon'>
+            <a href="/browse/advanced">
+            <Icon name="external alternate" size='huge' />
+            </a>
+          </span>
 
       </div>
 
