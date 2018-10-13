@@ -15,6 +15,7 @@ class TopicCard extends React.Component {
   }
 
   toggleFetch = (e) => {
+    console.log(e.target)
     if (e.target.className.includes("topic")) {
       let topic = this.props.topic.split(' ').join('-').toLowerCase()
       this.props.handleCourseFetch(topic)

@@ -29,6 +29,7 @@ const Adapter =  {
     },
 
     topicCourses: function(topic) {
+
       return fetch("http://jacoto-api.herokuapp.com/api/v1/queries", {
         method: "POST",
         headers: {
