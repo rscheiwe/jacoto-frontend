@@ -10,8 +10,9 @@ const MidRow = () => {
       <div className='midrow'>
 
 
-              <img src={require('./placeholder.png')} width="50%" alt="" />
-              <img src={require('./placeholder.png')} width="50%" alt="" />
+              <img src={require('./MIT.png')} width="20%" alt="" />
+              <img src={require('./Udacity_logo.png')} width="40%" alt="" />
+              <img src={require('./FutureLearn.png')} width="20%" alt="" />
 
       </div>
 
