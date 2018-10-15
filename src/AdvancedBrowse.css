@@ -1,0 +1,208 @@
+
+
+@media (max-width: 950px) {
+  .main-div {
+    width:100% !important;
+    max-width:100% !important;
+    max-height:750px!important;
+    height: 100% !important;
+    /* min-width: 100% !important; */
+    min-height: 100% !important;
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  div.blanket-div {
+    position: relative;
+    /* max-width:100% !important; */
+    min-height: 100% !important;
+    height: 100%;
+    /* background-repeat: no-repeat; */
+  }
+
+  .img-div {
+    width: 80% !important;
+    height:80% !important;
+    /* height: calc(100% - 86px); */
+    background-size: contain !important;
+    margin-top: 4% !important;
+    right: 0 !important;
+  }
+  .img-back-advanced {
+    width: 100% !important;
+    background-size: cover;
+    align: left;
+    background-position-x: 0% !important;
+    background-position-y: 0% !important;
+  }
+
+  .txt-div {
+    padding-left: 0px !important;
+    margin-top:-1em !important;
+    /* padding-right: 90% !important; */
+    position:absolute !important;
+    z-index: 1;
+    align-items: center;
+  }
+
+  .open-div-advanced {
+
+    width:80% !important;
+    position:relative !important;
+    font-size: 130px;
+    letter-spacing: .055em;
+    font-family: Oswald;
+    left:2em;
+
+  }
+
+  .mirror-div {
+    visibility:visible;
+}
+
+
+}
+
+@media only screen
+	and (max-device-width : 405px)
+	and (max-device-height : 812px)
+	and (-webkit-min-device-pixel-ratio: 3)
+	and (orientation : portrait) {
+
+    .main-div {
+      width:100% !important;
+      max-width:100% !important;
+      max-height:100% !important;
+      height: 100% !important;
+      min-width: 100% !important;
+      min-height: 100% !important;
+      position: relative;
+      overflow: hidden;
+    }
+
+    div.blanket-div {
+      position: relative;
+      /* max-width:100% !important; */
+      min-height: 100% !important;
+      height: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .img-div {
+      width: 80% !important;
+      height:80% !important;
+      /* height: calc(100% - 86px); */
+      background-size: contain !important;
+      top: 0 !important;
+      right: 0 !important;
+    }
+    .img-back-advanced {
+      width: 150% !important;
+      background-size: cover;
+      align: left;
+      background-position-x: 0% !important;
+      background-position-y: 0% !important;
+    }
+
+    .txt-div {
+      padding-left: 0px !important;
+      margin-top:0% !important;
+      /* padding-right: 90% !important; */
+      position:absolute !important;
+      z-index: 1;
+      flex-align: center !important;
+      align-items: center;
+    }
+
+    .open-div-advanced {
+
+      width:80% !important;
+      position:relative !important;
+      font-size: 2em !important;
+      letter-spacing: .055em;
+      font-family: Oswald;
+      left:0%;
+
+    }
+
+    .mirror-div {
+      visibility:hidden;
+    }
+
+}
+
+.main-div {
+  height: 100vh;
+  max-width: 950px;
+  /* min-height: 520px; */
+  position: relative;
+  overflow: hidden;
+}
+
+.head-div {
+  height: 100vh;
+  /* min-width: 1024px; */
+  /* min-height: 520px; */
+  /* position: relative; */
+  overflow: hidden;
+
+}
+
+.flex-div {
+  display: flex;
+  height: 100%;
+}
+
+div.blanket-div {
+  height: 100vh;
+
+  position: relative;
+  /* min-height: 520px; */
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.img-div {
+  width: 150%;
+  /* height:100%; */
+  height: calc(100% - 86px);
+  /* backgroun d-size: cover; */
+  top: 17%;
+  right: 18px;
+}
+
+.img-back-advanced {
+  width: 150%;
+  height:100%;
+  /* background-size: cover; */
+  align: left;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.txt-div {
+  padding-left: -350px;
+  z-index: 1;
+  flex-align: center;
+  align-items: center;
+}
+
+span.open-div-advanced {
+  font-size: 130px;
+  letter-spacing: .055em;
+  font-family: Oswald;
+}
+
+.advanced-font {
+  color:black;
+  font-family:Oswald;
+}
+
+.search-button-advanced {
+  display:inline;
+  width:10%;
+  height:100%;
+  z-index: 100000;
+  margin:5px;
+}

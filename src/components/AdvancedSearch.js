@@ -6,7 +6,7 @@ import AdvancedSearchCard from './AdvancedSearchCard.js'
 import ItemsCarousel from 'react-items-carousel';
 import { Container } from 'semantic-ui-react'
 // import { Link } from 'react-router-dom'
-import '../Browse.css'
+import '../AdvancedBrowse.css'
 
 class AdvancedSearch extends Component {
 
@@ -108,13 +108,14 @@ class AdvancedSearch extends Component {
                   <span className="advancedElement">
                   </span>
                     <span className='open-div-advanced'>
-                      <b>Advanced</b>
+                      <b>Advanced Search</b>
                     </span>
                 </h1>
-                <p className='mirror-div'><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vitae enim id aliquet. Quisque nec lorem pretium, posuere felis a, iaculis ex. Nulla tincidunt a nibh eget tempor.</b>
+                <p className='mirror-div'><b>Use the tabs below to search courses by Topic, Price, Length, or Provider</b>
                 </p>
               </div> </div> </div> </div> <div>
         <br />
+        <div className="search-buttons">
           <Container align='center' fluid>
 
             <AdvancedSearchCard option={'topic'} toggle={this.toggle}/>
@@ -123,7 +124,7 @@ class AdvancedSearch extends Component {
             <AdvancedSearchCard option={'provider'} toggle={this.toggle}/>
 
           </Container>
-
+          </div>
           <div className="container-row">
 
             <Container className="mt-5">
@@ -136,7 +137,7 @@ class AdvancedSearch extends Component {
                 requestToChangeActive={this.changeActiveItem}
                 activeItemIndex={activeItemIndex}
                 activePosition={'center'}
-                chevronWidth={36}
+                chevronWidth={66}
                 rightChevron={'>'}
                 leftChevron={'<'}
                 outsideChevron={true}

@@ -1,5 +1,7 @@
 import React from 'react'
-import '../Browse.css'
+import { Icon } from 'semantic-ui-react'
+
+import '../AdvancedBrowse.css'
 
 const AdvancedSearchCard = (props) => {
 
@@ -8,19 +10,32 @@ const AdvancedSearchCard = (props) => {
     props.toggle(e)
   }
 
+  let renderSwitch = (param) => {
+    switch(param) {
+      case 'topic':
+        return (<Icon name="folder outline" />)
+      case 'price':
+        return (<Icon name="dollar sign" />)
+      case 'length':
+        return (<Icon name="time" />)
+      case 'provider':
+        return (<Icon name="building outline" />)
+    }
+  }
+
   return (
-    <span className="search-button" onClick={handleClick} id={`${props.option}-search-font`}>
-    
-      <button className="btn btn-outline-info btn-sm my-0 ml-3 waves-effect waves-light" id='corners'>
-        {/*<h5>{props.option.toUpperCase()}</h5><i className="fa fa-sign-in ml-2"></i>*/}
-      {/*  <div onClick={handleClick} id={`${props.option}-search`} >
-          <div  onClick={handleClick} id={`${props.option}-search-text`}> */}
-            <h5 id={`${props.option}-search-font`}>{props.option.toUpperCase()}</h5>
-        {/*  </div>
-        </div> */}
+    <div className="search-button-advanced"  onClick={handleClick} id={`${props.option}-search-font`}>
+
+      <button className="search-button-advanced" id='corners' >
+
+        <h5 id={`${props.option}-search-font`} className="advanced-font">
+          {props.option.toUpperCase()}
+
+          {renderSwitch(props.option)}
+        </h5>
       </button>
 
-      </span>
+    </div>
   )
 }
 

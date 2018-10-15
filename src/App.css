@@ -24,7 +24,7 @@
     }
 
     .sideNavigator {
-      visibility:visible !important;
+      display:block !important;
       position: fixed !important;
       z-index: 999999 !important;
       right: 0 !important;
@@ -131,7 +131,7 @@ body{
 }
 
 .sideNavigator {
-  visibility:hidden;
+  display:none;
 }
 
 
@@ -576,4 +576,9 @@ hr.style-four {
   background-size:cover;
   background-positionX: 50%;
   background-positionY: 50%;
+}
+
+.float-right {
+  padding-right:10px;
+  padding-top:10px;
 }

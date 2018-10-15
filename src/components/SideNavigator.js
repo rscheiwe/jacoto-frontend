@@ -35,7 +35,7 @@ class SideNavigator extends Component {
 
       return(
           <div className='sideNavigator' >
-            <div className="float-right" style={{padding:'35px'}}>
+            <div className="float-right" >
               <a onClick={this.clicked} ><i className="fa fa-bars"></i><span className="sr-only" aria-hidden="true">Toggle side navigation</span></a>
             </div>
           <Collapse isOpen = { this.state.collapse } >
