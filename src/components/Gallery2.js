@@ -4,6 +4,7 @@ import GalleryCard from './GalleryCard.js'
 // connect, mapStateToProps
 import { Container } from 'mdbreact';
 import { connect } from 'react-redux'
+import Spinner from './Spinner.js'
 import '../Browse.css'
 
 
@@ -35,16 +36,19 @@ class Gallery2 extends React.Component {
 
 
   render() {
-    // console.log(this.props.courses)
+    console.log(this.props.courses)
 
     const courses = this.galleryItems(this.props.courses);
     // const activeItemIndex = 0
 
     return (
+      <div>
+
       <div className="container-row">
         <Container className="mt-5">
         <h2 style={{fontFamily:'Oswald', letterSpacing:'.5em', textAlign:'right'}}>Featured Courses</h2>
         <hr />
+        {courses.length > 1 ?
         <ItemsCarousel className="carousel"
 
           numberOfCards={3.5}
@@ -69,7 +73,15 @@ class Gallery2 extends React.Component {
         >
           {courses}
         </ItemsCarousel>
+        :
+        <div className="container-row">
+        <Spinner />
+        </div>
+
+        }
         </Container>
+        </div>
+
         </div>
 
     );

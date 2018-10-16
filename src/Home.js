@@ -28,6 +28,7 @@ class Home extends Component {
   }
 
   render() {
+    
     return (
 
       <div style={{backgroundColor:'rgb(255,255,244)'}}>
