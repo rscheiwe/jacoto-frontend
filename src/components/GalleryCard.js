@@ -48,7 +48,7 @@ class GalleryCard extends React.Component {
 
           <Card.Content>
 
-            <center><Link to={`/courses/${this.props.course.id}`}><h5 style={{textAlign:'center', padding:'3px', fontSize:'1.5vw', fontFamily:'Oswald'}}>{this.props.course.attributes.title}</h5></Link></center>
+            <center><Link to={`/courses/${this.props.course.id}`}><div ><h5 className="card-heading">{this.props.course.attributes.title}</h5></div></Link></center>
             <Card.Meta style={{paddingBottom:"20px"}}>
               <span className='provider' style={{padding:'10px', color:'gray', fontSize:'1.25vw'}}><small>Via <i>{this.props.course.attributes.provider}</i></small></span>
             </Card.Meta>

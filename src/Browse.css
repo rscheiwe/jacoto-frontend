@@ -669,6 +669,12 @@ h2.mirror {
   transform: translateY(-50%);
 }
 
+.form-control {
+  font-size:.5em !important;
+  height: calc(3.5rem + 2px) !important;
+  font-family: Monda !important;
+}
+
 .loading {
   display: inline-block;
   width: 50px;

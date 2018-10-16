@@ -60,7 +60,7 @@ class Browse extends Component {
               </span>
                 <span className="search-open-div-advanced">
                   <b>Search courses</b>
-                  <form onSubmit={this.handleSubmit}>
+                  <form className="searching" onSubmit={this.handleSubmit}>
                     <Input label="(topic, pace, etc.)" id="search-form" icon="search" onChange={this.handleChange} value={this.state.searchTerm} />
                   </form>
 
