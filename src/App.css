@@ -70,13 +70,13 @@
 
     .gallery-card {
       padding:5px;
-      max-height: 90% !important;
+      max-height: 190px !important;
     }
 
     .img-fluid {
       /* max-height:40px !important; */
-      min-width:80% !important;
-      max-width:80% !important;
+      min-width:100% !important;
+      max-width:100% !important;
       margin-left: auto;
       margin-right: auto;
       display:block;

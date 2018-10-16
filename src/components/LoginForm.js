@@ -46,7 +46,7 @@ class LoginForm extends React.Component {
               <ModalHeader toggle={this.toggle}>Please Login</ModalHeader>
                 <ModalBody>
                 <form >
-                  <Input label="Your Email" icon="envelope" onChange={this.handleChange} />
+                  <Input label="Your Email" icon="envelope" className="login-control" onChange={this.handleChange} />
                   <Input type="password" label="Type your password" icon="lock" onChange={this.handlePass}/>
                 </form>
                 </ModalBody>
