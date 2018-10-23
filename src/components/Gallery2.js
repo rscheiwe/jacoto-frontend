@@ -48,7 +48,7 @@ class Gallery2 extends React.Component {
         <Container className="mt-5">
         <h2 style={{fontFamily:'Oswald', letterSpacing:'.5em', textAlign:'right'}}>Featured Courses</h2>
         <hr />
-        {courses.length > 1 ?
+
         <ItemsCarousel className="carousel"
 
           numberOfCards={3.5}
@@ -73,12 +73,12 @@ class Gallery2 extends React.Component {
         >
           {courses}
         </ItemsCarousel>
-        :
+{/*        :
         <div className="container-row">
         <Spinner />
         </div>
 
-        }
+      } */}
         </Container>
         </div>
 
